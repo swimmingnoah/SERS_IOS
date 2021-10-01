@@ -18,7 +18,7 @@ class RegisterViewController: UIViewController {
 	
 	private let imageView: UIImageView = {
 		let imageView = UIImageView()
-		imageView.image = UIImage(systemName: "person")
+		imageView.image = UIImage(systemName: "person.circle")
 		imageView.tintColor = .gray
 		imageView.contentMode = .scaleAspectFit
 		imageView.layer.masksToBounds = true
@@ -195,23 +195,37 @@ class RegisterViewController: UIViewController {
 			  !lastName.isEmpty,
 			  !password.isEmpty,
 			  password.count >= 6 else {
-				  alertUserLoginError()
+				  alertUserLoginError(message: "thier was an error with the passworrd being too short")
 				  return
 			  }
-		
-		//		firebase login
-		FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
-			guard let result = authResult, error == nil else {
-				print("error creatign user")
+		DatabaseManager.shared.userExists(with: email, completion: {[weak self] exists in
+			guard let strongSelf = self else {
 				return
 			}
-			let user = result.user
-			print("created User: \(user)")
+			guard !exists else {
+				strongSelf.alertUserLoginError(message: "Looks Like a user account email for that email address already exists.")
+//				user already exists
+				return
+			}
+			
+			
+			//		firebase login
+			FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
+				guard authResult != nil, error == nil else {
+					print("error creatign user")
+					return
+				}
+				DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName,
+																	lastName: lastName,
+																	emailAddress: email))
+				strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+			})
 		})
+
 	}
 	
-	func alertUserLoginError() {
-		let alert = UIAlertController(title: "Whoops", message: "Please enter all information", preferredStyle: .alert)
+	func alertUserLoginError(message: String) {
+		let alert = UIAlertController(title: "Whoops", message: message, preferredStyle: .alert)
 		
 		alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
 	}
