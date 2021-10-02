@@ -4,19 +4,21 @@
 target 'SERS' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  # Pods for SERS
+#firebase
 pod  'Firebase/Core'
 pod  'Firebase/Auth'
 pod  'Firebase/Database'
 pod 'Firebase/Analytics'
-  # Pods for SERS
+# google Sign In 
+pod 'GoogleSignIn'
 
-  target 'SERSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
-  target 'SERSUITests' do
-    # Pods for testing
-  end
+
+pod 'MessageKit'
+pod 'JGProgressHUD'
+pod 'RealmSwift'
+pod 'SDWebImage'
+
 
 end
