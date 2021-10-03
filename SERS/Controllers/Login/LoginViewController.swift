@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 
 import JGProgressHUD
+import SwiftUI
 
 class LoginViewController: UIViewController {
 	
@@ -34,7 +35,7 @@ class LoginViewController: UIViewController {
 		field.returnKeyType = .continue
 		field.layer.cornerRadius = 12
 		field.layer.borderWidth = 1
-		field.layer.borderColor = UIColor.lightGray.cgColor
+		field.layer.borderColor = UIColor.gray.cgColor
 		field.placeholder = "Email Address..."
 		
 		field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
@@ -51,7 +52,7 @@ class LoginViewController: UIViewController {
 		field.returnKeyType = .done
 		field.layer.cornerRadius = 12
 		field.layer.borderWidth = 1
-		field.layer.borderColor = UIColor.lightGray.cgColor
+		field.layer.borderColor = UIColor.gray.cgColor
 		field.placeholder = "Password..."
 		field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
 		field.leftViewMode = .always
@@ -76,6 +77,7 @@ class LoginViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		title = "Log In"
+//		overrideUserInterfaceStyle = .dark
 		view.backgroundColor = .white
 		
 		
