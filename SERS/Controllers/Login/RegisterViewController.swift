@@ -12,7 +12,7 @@ import JGProgressHUD
 class RegisterViewController: UIViewController {
 	
 	private let spinner = JGProgressHUD(style: .dark)
-
+	
 	
 	private let scrollView: UIScrollView = {
 		let scrollView = UIScrollView()
@@ -123,8 +123,8 @@ class RegisterViewController: UIViewController {
 															target: self,
 															action: #selector(didTapRegister))
 		registerButton.addTarget(self,
-							  action: #selector(registerButtonTapped),
-							  for: .touchUpInside)
+								 action: #selector(registerButtonTapped),
+								 for: .touchUpInside)
 		
 		emailField.delegate = self
 		passwordField.delegate = self
@@ -161,27 +161,27 @@ class RegisterViewController: UIViewController {
 								 height: size)
 		imageView.layer.cornerRadius = imageView.width/2.0
 		firstNameField.frame = CGRect(x: 30,
-								  y: imageView.bottom+10,
-								  width: scrollView.width-60,
-								  height: 53)
+									  y: imageView.bottom+10,
+									  width: scrollView.width-60,
+									  height: 53)
 		lastNameField.frame = CGRect(x: 30,
-								  y: firstNameField.bottom+10,
-								  width: scrollView.width-60,
-								  height: 53)
-
+									 y: firstNameField.bottom+10,
+									 width: scrollView.width-60,
+									 height: 53)
+		
 		emailField.frame = CGRect(x: 30,
 								  y: lastNameField.bottom+10,
 								  width: scrollView.width-60,
 								  height: 53)
-
+		
 		passwordField.frame = CGRect(x: 30,
 									 y: emailField.bottom+10,
 									 width: scrollView.width-60,
 									 height: 53)
 		registerButton.frame = CGRect(x: 30,
-								   y: passwordField.bottom+10,
-								   width: scrollView.width-60,
-								   height: 53)
+									  y: passwordField.bottom+10,
+									  width: scrollView.width-60,
+									  height: 53)
 	}
 	
 	@objc private func registerButtonTapped() {
@@ -191,9 +191,9 @@ class RegisterViewController: UIViewController {
 		lastNameField.resignFirstResponder()
 		
 		guard let firstName = firstNameField.text,
-				let lastName = lastNameField.text,
-				let email = emailField.text,
-				let password = passwordField.text,
+			  let lastName = lastNameField.text,
+			  let email = emailField.text,
+			  let password = passwordField.text,
 			  !email.isEmpty,
 			  !firstName.isEmpty,
 			  !lastName.isEmpty,
@@ -217,7 +217,7 @@ class RegisterViewController: UIViewController {
 			}
 			guard !exists else {
 				strongSelf.alertUserLoginError(message: "Looks Like a user account email for that email address already exists.")
-//				user already exists
+				//				user already exists
 				return
 			}
 			
@@ -228,13 +228,19 @@ class RegisterViewController: UIViewController {
 					print("error creatign user")
 					return
 				}
-				DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName,
-																	lastName: lastName,
-																	emailAddress: email))
+				let chatUser = ChatAppUser(firstName: firstName,
+										   lastName: lastName,
+										   emailAddress: email)
+				
+				DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
+					if success {
+//						upload image
+					}
+				})
 				strongSelf.navigationController?.dismiss(animated: true, completion: nil)
 			})
 		})
-
+		
 	}
 	
 	func alertUserLoginError(message: String) {
@@ -284,7 +290,7 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
 											style: .default,
 											handler: {[weak self] _ in
 			self?.PresentPhotoPicker()
-		
+			
 		}))
 		present(actionSheet, animated: true)
 		
@@ -311,7 +317,7 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
 		guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
 			return
 		}
-
+		
 		self.imageView.image = selectedImage
 	}
 	
