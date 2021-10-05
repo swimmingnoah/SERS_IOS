@@ -28,6 +28,7 @@
 		B6A4A18F27066C450011DD8F /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4A18E27066C450011DD8F /* DatabaseManager.swift */; };
 		B6B1CD652709260100D6CF8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1CD642709260100D6CF8E /* ChatViewController.swift */; };
 		B6B1CD67270AA92D00D6CF8E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1CD66270AA92D00D6CF8E /* StorageManager.swift */; };
+		B6F1587F270C01EE00DEE09B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F1587E270C01EE00DEE09B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		B6A4A18E27066C450011DD8F /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		B6B1CD642709260100D6CF8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B6B1CD66270AA92D00D6CF8E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B6F1587E270C01EE00DEE09B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B6F15880270CA32A00DEE09B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E7FCA05111E0420AD5F6A2BB /* Pods_SERS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SERS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,6 +126,7 @@
 		B6A4A137270528990011DD8F = {
 			isa = PBXGroup;
 			children = (
+				B6F15880270CA32A00DEE09B /* README.md */,
 				B6A4A142270528990011DD8F /* SERS */,
 				B6A4A1592705289D0011DD8F /* SERSTests */,
 				B6A4A1632705289D0011DD8F /* SERSUITests */,
@@ -218,6 +222,7 @@
 				B6A4A18627052AAC0011DD8F /* NewConversationViewController.swift */,
 				B6A4A18827052AB80011DD8F /* ProfileViewController.swift */,
 				B6B1CD642709260100D6CF8E /* ChatViewController.swift */,
+				B6F1587E270C01EE00DEE09B /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 				B6B1CD652709260100D6CF8E /* ChatViewController.swift in Sources */,
 				B6A4A146270528990011DD8F /* SceneDelegate.swift in Sources */,
 				B6B1CD67270AA92D00D6CF8E /* StorageManager.swift in Sources */,
+				B6F1587F270C01EE00DEE09B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
