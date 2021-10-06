@@ -73,5 +73,8 @@ struct ChatAppUser {
 		safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
 		return safeEmail
 	}
-//		let profilePictureUrl: String
+	var profilePictureFineName: String {
+//		noah-gmail-com_profile_picture.png
+		return "\(safeEmail)_profile_picture.png"
+	}
 }
