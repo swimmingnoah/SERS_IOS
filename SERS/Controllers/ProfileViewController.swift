@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 
+
 class ProfileViewController: UIViewController {
 	
 	@IBOutlet var tableView: UITableView!
@@ -20,6 +21,51 @@ class ProfileViewController: UIViewController {
 						   forCellReuseIdentifier: "cell")
 		tableView.delegate = self
 		tableView.dataSource = self
+		tableView.tableHeaderView = createTabelHeader()
+	}
+	func createTabelHeader() -> UIView? {
+		guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
+			return nil
+			
+		}
+		let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
+		let filename = safeEmail + "_prifile_picture.png"
+		
+		let path = "images/" + filename
+		
+		
+		let headerView = UIView(frame: CGRect(x: 0,
+										y: 0,
+										width: self.view.width,
+										height: 300))
+		
+		
+		headerView.backgroundColor = .link
+		let imageView = UIImageView(frame: CGRect(x: (headerView.width-150) / 2,
+												  y: 75,
+												  width: 150,
+												  height: 150))
+		
+		
+		imageView.contentMode = .scaleAspectFill
+		imageView.backgroundColor = .white
+		imageView.layer.borderColor = UIColor.white.cgColor
+		imageView.layer.borderWidth = 3
+		imageView.layer.masksToBounds = true
+		
+		headerView.addSubview(imageView)
+		
+		
+		StorageManager.shared.downloadURL(for: path, completion: {result in
+			switch result {
+			case .success(let url):
+				
+			case .failure(let error):
+				print("failed to get download url:\(error)")
+			}
+		})
+		
+		return headerView
 	}
 }
 
