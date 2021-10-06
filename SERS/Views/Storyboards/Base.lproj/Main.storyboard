@@ -164,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="438" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="Xmu-va-Smc">
             <objects>
-                <viewController id="u9m-zx-LKB" sceneMemberID="viewController">
+                <viewController id="u9m-zx-LKB" customClass="MapViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="03S-Gc-VOb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,6 +186,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xvd-6k-s5v"/>
+                    <connections>
+                        <outlet property="MapView" destination="Da6-so-JvU" id="hwt-Vh-xVH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCx-Qf-qmV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

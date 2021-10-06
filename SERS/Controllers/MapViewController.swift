@@ -10,13 +10,16 @@ import RealmSwift
 import MapKit
 import CoreLocation
 
+
 class MapViewController: UIViewController, CLLocationManagerDelegate {
-	@IBOutlet var MapView: MKMapView!
+	@IBOutlet private var MapView: MKMapView!
 	
 	let manager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//		MapView.delegate = self
+//		MapView.dataSource = self
 
 		
 		
