@@ -60,6 +60,28 @@ extension DatabaseManager {
 	}
 }
 
+// sending messages/ convos
+extension DatabaseManager {
+//	creates new convo with email and first message sent
+	public func createNewConversation(with otherUserEmail: String, firstMessage: Message, completion: @escaping (Bool) -> Void) {
+		
+	}
+	
+//	fetches and returns all convos for user with passed in email
+	public func getAllConversations(for email: String, completion: @escaping (Result<String, Error>) -> Void) {
+		
+	}
+//	gets all messages for given convos
+	public func getAllMessagesForConversation(with id: String, completion: @escaping (Result<String, Error>) -> Void) {
+		
+	}
+//	sends message with target convo and message
+	public func sendMessage(to conversation: String, message: Message, completion: (Bool) -> Void) {
+		
+	}
+}
+
+
 
 
 

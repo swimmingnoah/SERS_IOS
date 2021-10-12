@@ -80,7 +80,7 @@ class ConversationsViewController: UIViewController {
 
 extension ConversationsViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 1
+		return 2
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,9 +92,9 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
-		let vc = ChatViewController()
-		vc.title = "jenny smith"
-		vc.navigationItem.largeTitleDisplayMode = .never
-		navigationController?.pushViewController(vc, animated: true)
+//		let vc = ChatViewController(with: "tesign@gmail.com")
+//		vc.title = "jenny smith"
+//		vc.navigationItem.largeTitleDisplayMode = .never
+//		navigationController?.pushViewController(vc, animated: true)
 	}
 }
