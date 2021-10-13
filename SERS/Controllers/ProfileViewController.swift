@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController {
 			
 		}
 		let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
-		let filename = safeEmail + "_prifile_picture.png"
+		let filename = safeEmail + "_profile_picture.png"
 		
 		let path = "images/" + filename
 		
@@ -57,7 +57,7 @@ class ProfileViewController: UIViewController {
 		headerView.addSubview(imageView)
 		
 		
-		StorageManager.shared.downloadURL(for: path, completion: { [weak self]result in
+		StorageManager.shared.downloadURL(for: path, completion: { [weak self] result in
 			switch result {
 			case .success(let url):
 				self?.downloadImage(imageView: imageView, url: url)
