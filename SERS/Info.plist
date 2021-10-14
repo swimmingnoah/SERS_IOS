@@ -4,6 +4,8 @@
 <dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Please allow to see the current location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This applicaiton is using your location </string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
