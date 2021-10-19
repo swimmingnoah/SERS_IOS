@@ -11,6 +11,7 @@ class TipLineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        view.backgroundColor = .lightGray
 
         // Do any additional setup after loading the view.
     }

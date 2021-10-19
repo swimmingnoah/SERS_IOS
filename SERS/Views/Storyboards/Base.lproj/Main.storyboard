@@ -134,18 +134,64 @@
         <!--Tip Line-->
         <scene sceneID="7W5-Cf-jGM">
             <objects>
-                <viewController id="TZK-PL-eBT" sceneMemberID="viewController">
+                <viewController id="TZK-PL-eBT" customClass="TipLineViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e0I-SZ-rK5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="New Tip" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CRT-mH-Z5e">
+                                <rect key="frame" x="131" y="451" width="152" height="51.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bottom text" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFr-fw-Wj6">
+                                <rect key="frame" x="155.5" y="552.5" width="103" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5XT-q0-Jac"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CFr-fw-Wj6" firstAttribute="centerX" secondItem="CRT-mH-Z5e" secondAttribute="centerX" id="Dk9-dW-7Ka"/>
+                            <constraint firstItem="CRT-mH-Z5e" firstAttribute="centerY" secondItem="5XT-q0-Jac" secondAttribute="centerY" id="O6D-eM-uJp"/>
+                            <constraint firstItem="CRT-mH-Z5e" firstAttribute="centerX" secondItem="5XT-q0-Jac" secondAttribute="centerX" id="sEQ-zq-dJM"/>
+                            <constraint firstItem="CFr-fw-Wj6" firstAttribute="top" secondItem="CRT-mH-Z5e" secondAttribute="bottom" constant="50" id="xPo-1q-N1I"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Line" id="ygM-jX-JJd"/>
+                    <navigationItem key="navigationItem" title="Tip Line" id="ygM-jX-JJd">
+                        <barButtonItem key="rightBarButtonItem" title="New Tip" image="square.and.pencil" catalog="system" style="plain" id="ld9-3y-mdV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="r9a-Qc-YSb">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <connections>
+                                <segue destination="HaE-5S-zo8" kind="show" id="v2D-t2-DgL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4G-g7-pSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="903"/>
+            <point key="canvasLocation" x="437.68115942028987" y="902.67857142857133"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uTk-tj-WAs">
+            <objects>
+                <viewController id="HaE-5S-zo8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sDc-Z6-187">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wB3-LO-Am9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5vB-DT-3gq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgY-W4-3iy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="1615"/>
         </scene>
         <!--Tip Line-->
         <scene sceneID="pw6-bm-8NH">
@@ -199,6 +245,7 @@
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="xmark.app" catalog="system" width="128" height="114"/>
         <image name="xmark.bin" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
