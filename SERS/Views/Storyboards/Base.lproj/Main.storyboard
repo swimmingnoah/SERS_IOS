@@ -181,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="437.68115942028987" y="902.67857142857133"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Tip View Controller-->
         <scene sceneID="uTk-tj-WAs">
             <objects>
-                <viewController id="HaE-5S-zo8" sceneMemberID="viewController">
+                <viewController id="HaE-5S-zo8" customClass="CreateTipViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sDc-Z6-187">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
