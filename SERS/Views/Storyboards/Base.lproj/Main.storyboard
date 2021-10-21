@@ -161,6 +161,9 @@
                                     </attributedString>
                                     <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="HaE-5S-zo8" kind="show" id="Daf-8q-w2s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5XT-q0-Jac"/>
