@@ -173,7 +173,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 			}
 		let Mu_Police = MKPointAnnotation()
 		Mu_Police.coordinate = CLLocationCoordinate2D(latitude: 38.93942743153144, longitude: -92.32430080028901)
-		Mu_Police.title = "University of Missouri Police DepartmentR"
+		Mu_Police.title = "University of Missouri Police Department"
 		Mu_Police.subtitle = "Inside Virginia Avenue Garage"
 		MapView.addAnnotation(Mu_Police)
 
