@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -134,18 +135,67 @@
         <!--Tip Line-->
         <scene sceneID="7W5-Cf-jGM">
             <objects>
-                <viewController id="TZK-PL-eBT" sceneMemberID="viewController">
+                <viewController id="TZK-PL-eBT" customClass="TipLineViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e0I-SZ-rK5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtC-Sa-JKQ">
+                                <rect key="frame" x="19.5" y="425" width="375" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="dgR-zK-2L1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.pencil" catalog="system" imagePadding="7" buttonSize="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="New Tip">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" metaFont="system" size="20"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="HaE-5S-zo8" kind="show" id="Daf-8q-w2s"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5XT-q0-Jac"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wtC-Sa-JKQ" firstAttribute="centerX" secondItem="5XT-q0-Jac" secondAttribute="centerX" id="YK6-WZ-a9H"/>
+                            <constraint firstItem="wtC-Sa-JKQ" firstAttribute="centerY" secondItem="5XT-q0-Jac" secondAttribute="centerY" id="cQc-UE-jnZ"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Tip Line" id="ygM-jX-JJd"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4G-g7-pSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="903"/>
+            <point key="canvasLocation" x="437.68115942028987" y="902.67857142857133"/>
+        </scene>
+        <!--Create Tip View Controller-->
+        <scene sceneID="uTk-tj-WAs">
+            <objects>
+                <viewController id="HaE-5S-zo8" customClass="CreateTipViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sDc-Z6-187">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wB3-LO-Am9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5vB-DT-3gq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgY-W4-3iy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="1615"/>
         </scene>
         <!--Tip Line-->
         <scene sceneID="pw6-bm-8NH">
@@ -199,8 +249,12 @@
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="xmark.app" catalog="system" width="128" height="114"/>
         <image name="xmark.bin" catalog="system" width="128" height="93"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
