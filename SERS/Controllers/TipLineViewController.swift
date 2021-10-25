@@ -15,7 +15,8 @@ class TipLineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .lightGray
+        view.backgroundColor = .lightGray
+		view.backgroundColor = .orange
 
         // Do any additional setup after loading the view.
     }
@@ -25,3 +26,4 @@ class TipLineViewController: UIViewController {
 
 }
 // This is a Test for Ryan
+//this is a noah test
