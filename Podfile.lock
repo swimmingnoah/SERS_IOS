@@ -114,6 +114,7 @@ PODS:
   - leveldb-library (1.22.1)
   - MessageKit (3.7.0):
     - InputBarAccessoryView (~> 5.4.0)
+  - MTSlideToOpen (1.5.1)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -138,6 +139,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - JGProgressHUD
   - MessageKit
+  - MTSlideToOpen
   - RealmSwift
   - SDWebImage
 
@@ -161,6 +163,7 @@ SPEC REPOS:
     - JGProgressHUD
     - leveldb-library
     - MessageKit
+    - MTSlideToOpen
     - nanopb
     - PromisesObjC
     - Realm
@@ -186,12 +189,13 @@ SPEC CHECKSUMS:
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   MessageKit: 8e76dd8d65ad44b49e1651c673497146416461e9
+  MTSlideToOpen: dedc9abf1e377fef40544b84e5590d4981055030
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   Realm: b6027801398f3743fc222f096faa85281b506e6c
   RealmSwift: b02a3d0e4947955da960b642c98ad3a461fc4e70
   SDWebImage: 4ea20cca2986adc5aacde07aa686742fd4c67a37
 
-PODFILE CHECKSUM: b41433cee773bc570b818a720376ba5210060bf9
+PODFILE CHECKSUM: 7dc9fb9b0d8d1e6546202dd9c752581ee9805e35
 
 COCOAPODS: 1.11.2

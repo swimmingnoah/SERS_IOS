@@ -55,6 +55,8 @@
 		806E4F0F2721D01E00D32DCC /* CreateTipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTipViewController.swift; sourceTree = "<group>"; };
 		80D724F5271F417E00C6B1AE /* TipLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipLineViewController.swift; sourceTree = "<group>"; };
 		AFCAB4A265E1CBF3A206C878 /* Pods-SERS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SERS.debug.xcconfig"; path = "Target Support Files/Pods-SERS/Pods-SERS.debug.xcconfig"; sourceTree = "<group>"; };
+		B63C0EE62715168100922264 /* SlideToConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideToConfirmViewController.swift; sourceTree = "<group>"; };
+		B63C0EE827151BC100922264 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		B6A4A140270528990011DD8F /* SERS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SERS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A4A143270528990011DD8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6A4A145270528990011DD8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -446,7 +448,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A4A17F27052A4C0011DD8F /* LoginViewController.swift in Sources */,
+				B63C0EE72715168100922264 /* SlideToConfirmViewController.swift in Sources */,
 				B6A4A18F27066C450011DD8F /* DatabaseManager.swift in Sources */,
+				B63C0EE927151BC100922264 /* ConfirmViewController.swift in Sources */,
 				B6A4A179270529170011DD8F /* Extentions.swift in Sources */,
 				B6A4A18927052AB80011DD8F /* ProfileViewController.swift in Sources */,
 				B6A4A18527052A8D0011DD8F /* VideoViewController.swift in Sources */,
