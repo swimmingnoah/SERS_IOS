@@ -111,10 +111,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 			do {
 				try FirebaseAuth.Auth.auth().signOut()
 				
-				let vc = LoginViewController()
-				let nav = UINavigationController(rootViewController: vc)
-				nav.modalPresentationStyle = .fullScreen
-				strongSelf.present(nav, animated: true)
+//				let vc = LoginViewController()
+//				let nav = UINavigationController(rootViewController: vc)
+//				nav.modalPresentationStyle = .fullScreen
+//				strongSelf.present(nav, animated: true)
 			}
 			catch {
 				print("failed to logout")

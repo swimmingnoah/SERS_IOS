@@ -70,18 +70,18 @@ class ConversationsViewController: UIViewController {
 	}
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		validateAuth()
+//		validateAuth()
 		
 
 	}
-	private func validateAuth() {
-		if FirebaseAuth.Auth.auth().currentUser === nil {
-			let vc = LoginViewController()
-			let nav = UINavigationController(rootViewController: vc)
-			nav.modalPresentationStyle = .fullScreen
-			present(nav, animated: false)
-		}
-	}
+//	private func validateAuth() {
+//		if FirebaseAuth.Auth.auth().currentUser === nil {
+//			let vc = LoginViewController()
+//			let nav = UINavigationController(rootViewController: vc)
+//			nav.modalPresentationStyle = .fullScreen
+//			present(nav, animated: false)
+//		}
+//	}
 	private func setupTableView() {
 		tableView.delegate = self
 		tableView.dataSource = self
