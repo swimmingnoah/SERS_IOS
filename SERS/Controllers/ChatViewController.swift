@@ -7,7 +7,6 @@
 
 import UIKit
 import MessageKit
-import InputBarAccessoryView
 
 
 struct Message: MessageType {
@@ -29,105 +28,36 @@ struct Sender: SenderType {
 
 class ChatViewController: MessagesViewController {
 	
-	public static let dateFormatter: DateFormatter = {
-		let formattre = DateFormatter()
-		formattre.dateStyle = .medium
-		formattre.timeStyle = .long
-		formattre.locale = .current
-		return formattre
-	}()
-	
-	public let otherUserEmail: String
-	public var isNewConversation = false
-	
 	private var messages = [Message]()
 	
-	private var selfSender: Sender? {
-		guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
-			return nil
-		}
-				return Sender(photoURL: "",
-					   senderId: email,
-					   displayName: "Joe Smith")
-	}
-	init(with email:String) {
-		self.otherUserEmail = email
-		super.init(nibName: nil, bundle: nil)
-	}
+	private let selfSender = Sender(photoURL: "",
+									senderId: "1",
+									displayName: "Joe Smith")
 
-	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
-	}
-	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		messages.append(Message(sender: selfSender,
+								messageId: "1",
+								sentDate: Date(),
+								kind: .text("Hello world Message")))
+		messages.append(Message(sender: selfSender,
+								messageId: "1",
+								sentDate: Date(),
+								kind: .text("Hello world Message numbre 2 Hello world Message numbre 2 Hello world Message numbre 2")))
+		
 		
 		messagesCollectionView.messagesDataSource = self
 		messagesCollectionView.messagesLayoutDelegate = self
 		messagesCollectionView.messagesDisplayDelegate = self
-		messageInputBar.delegate = self
-//		messageInputBar.inputTextView.isFirstResponder
-    }
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		messageInputBar.inputTextView.becomeFirstResponder()
-	}
-    
-
-
-}
-extension ChatViewController: InputBarAccessoryViewDelegate {
-	func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
-		guard !text.replacingOccurrences(of: " ", with: "").isEmpty,
-		let selfSender = self.selfSender,
-		let messageId = createMessageId() else{
-			
-			return
-		}
-		print("sending: \(text)")
-//		send message
-		if isNewConversation {
-//			create convo
-			let mmessage = Message(sender: selfSender,
-								  messageId: messageId,
-								  sentDate: Date(),
-								  kind: .text(text))
-			DatabaseManager.shared.createNewConversation(with: otherUserEmail, firstMessage: mmessage, completion: { success in
-				if success {
-					print("message sent")
-				}
-				else {
-					print("failed to send")
-				}
-			})
-		}
-		else {
-//			append to existing
-		}
-		
 	}
 	
-	private func createMessageId() -> String? {
-		//		date, other user email, sender email, ramdom int
-		
-		guard let currentUserEmail = UserDefaults.standard.value(forKey: "email") else {
-				  return nil
-			  }
-		let dateString = Self.dateFormatter.string(from: Date())
-		let newIdentifier = "\(otherUserEmail)_\(currentUserEmail)_\(dateString)"
-		print("created message id \(newIdentifier)")
-		return newIdentifier
-	}
+
+
 }
   
 extension ChatViewController: MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
 	func currentSender() -> SenderType {
-		if let sender = selfSender {
-			return sender
-		}
-		fatalError("Self sender is nil, email should be cached")
-		return Sender(photoURL: "", senderId: "12", displayName: "")
+		return selfSender
 	}
 	
 	func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {

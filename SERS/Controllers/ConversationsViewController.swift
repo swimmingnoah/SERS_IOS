@@ -40,29 +40,15 @@ class ConversationsViewController: UIViewController {
 		view.addSubview(tableView)
 		view.addSubview(noConversationsLabel)
 		setupTableView()
+		
 		fetchConversations()
 		// Do any additional setup after loading the view.
 
 	}
 	@objc private func didTapComposeButton () {
 		let vc = NewConversationViewController()
-//		vc.completion = {[weak self] result in
-//			self?.createNewConversation(result: result)
-//		}
 		let navVC = UINavigationController(rootViewController: vc)
 		present(navVC, animated: true)
-	}
-	
-	private func createNewConversation(result: [String: String]) {
-		guard let name = result["name"],
-			  let email = result["email"] else {
-				  return
-		}
-		let vc = ChatViewController(with: email)
-		vc.isNewConversation = true
-		vc.title = name
-		vc.navigationItem.largeTitleDisplayMode = .never
-		navigationController?.pushViewController(vc, animated: true)
 	}
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
@@ -94,7 +80,7 @@ class ConversationsViewController: UIViewController {
 
 extension ConversationsViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 2
+		return 1
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -106,7 +92,7 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
-		let vc = ChatViewController(with: "test@gmail.com")
+		let vc = ChatViewController()
 		vc.title = "jenny smith"
 		vc.navigationItem.largeTitleDisplayMode = .never
 		navigationController?.pushViewController(vc, animated: true)
