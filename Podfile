@@ -21,5 +21,7 @@ pod 'JGProgressHUD'
 pod 'RealmSwift'
 pod 'SDWebImage'
 
+pod 'MTSlideToOpen'
+
 
 end

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>717264476552-16s9nbgf9jkjk3t0o7ht7v2kvhntgikq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.717264476552-16s9nbgf9jkjk3t0o7ht7v2kvhntgikq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBrWLJKHL_LI2peOZ3F8N3b_C1E6Pyy87I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>717264476552</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.noahnemec.SERS</string>
+	<key>PROJECT_ID</key>
+	<string>silentemergencymu-ced0a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>silentemergencymu-ced0a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:717264476552:ios:bfdbbe0660ab5f90dd823d</string>
+	<key>DATABASE_URL</key>
+	<string>https://silentemergencymu-ced0a-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

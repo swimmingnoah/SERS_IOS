@@ -34,8 +34,8 @@ class ChatViewController: MessagesViewController {
 									senderId: "1",
 									displayName: "Joe Smith")
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		messages.append(Message(sender: selfSender,
 								messageId: "1",
 								sentDate: Date(),
@@ -49,8 +49,8 @@ class ChatViewController: MessagesViewController {
 		messagesCollectionView.messagesDataSource = self
 		messagesCollectionView.messagesLayoutDelegate = self
 		messagesCollectionView.messagesDisplayDelegate = self
-    }
-    
+	}
+	
 
 
 }
