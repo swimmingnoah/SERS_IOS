@@ -26,7 +26,6 @@
 		B6A4A18527052A8D0011DD8F /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4A18427052A8D0011DD8F /* VideoViewController.swift */; };
 		B6A4A18727052AAC0011DD8F /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4A18627052AAC0011DD8F /* NewConversationViewController.swift */; };
 		B6A4A18927052AB80011DD8F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4A18827052AB80011DD8F /* ProfileViewController.swift */; };
-		B6A4A18D2705488F0011DD8F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6A4A18C2705488F0011DD8F /* GoogleService-Info.plist */; };
 		B6A4A18F27066C450011DD8F /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4A18E27066C450011DD8F /* DatabaseManager.swift */; };
 		B6B1CD652709260100D6CF8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1CD642709260100D6CF8E /* ChatViewController.swift */; };
 		B6B1CD67270AA92D00D6CF8E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1CD66270AA92D00D6CF8E /* StorageManager.swift */; };
@@ -75,7 +74,6 @@
 		B6A4A18427052A8D0011DD8F /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		B6A4A18627052AAC0011DD8F /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		B6A4A18827052AB80011DD8F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B6A4A18C2705488F0011DD8F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6A4A18E27066C450011DD8F /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		B6B1CD642709260100D6CF8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B6B1CD66270AA92D00D6CF8E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 		B6A4A142270528990011DD8F /* SERS */ = {
 			isa = PBXGroup;
 			children = (
-				B6A4A18C2705488F0011DD8F /* GoogleService-Info.plist */,
 				B6A4A173270528AF0011DD8F /* Resources */,
 				B6A4A174270528C00011DD8F /* ViewModels */,
 				B6A4A175270528D70011DD8F /* Models */,
@@ -359,7 +356,6 @@
 			files = (
 				B6A4A1502705289C0011DD8F /* LaunchScreen.storyboard in Resources */,
 				B6A4A14D2705289C0011DD8F /* Assets.xcassets in Resources */,
-				B6A4A18D2705488F0011DD8F /* GoogleService-Info.plist in Resources */,
 				B6A4A14B270528990011DD8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
