@@ -158,52 +158,12 @@ class MapTestViewController: UIViewController, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
         //  annotationView.glyphTintColor = UIColor.black
-        switch annotation.title!! {
+        switch annotation.subtitle!! {
         
-        case "University of Missouri Police Department":
+        case "Police station":
             pinView.markerTintColor = UIColor.red
-        case "Hospital Garage 1":
+        case "YELLOW BOX":
             pinView.markerTintColor = UIColor.yellow
-        case "Hospital Garage 2":
-            pinView.markerTintColor = UIColor.yellow
-        case "Hospital Garage 3":
-            pinView.markerTintColor = UIColor.yellow
-        case "Hospital Garage 4":
-            pinView.markerTintColor = UIColor.yellow
-        case "South Residence Hall":
-            pinView.markerTintColor = UIColor.yellow
-        case "Center Residence Hall":
-            pinView.markerTintColor = UIColor.yellow
-        case "Blueford Residence Hall":
-            pinView.markerTintColor = UIColor.yellow
-        case "Laws Residence Hall":
-            pinView.markerTintColor = UIColor.yellow
-        case "Brooks Residence Hall":
-            pinView.markerTintColor = UIColor.yellow
-        case "Tiger Ave Garage 1":
-            pinView.markerTintColor = UIColor.yellow
-        case "Tiger Ave Garage 2":
-            pinView.markerTintColor = UIColor.yellow
-        case "Tiger Ave Garage 3":
-            pinView.markerTintColor = UIColor.yellow
-        case "Tiger Ave Garage 4":
-            pinView.markerTintColor = UIColor.yellow
-        case "Tiger Ave Garage 5":
-            pinView.markerTintColor = UIColor.yellow
-            
-            /*case "Statue Of Liberty":
-                annotationView.markerTintColor = UIColor(red: (69.0/255), green: (95.0/255), blue: (170.0/255), alpha: 1.0)
-                annotationView.glyphImage = UIImage(named: "liberty")
-            case "Central Park":
-                annotationView.markerTintColor = UIColor(red: (52.0/255), green: (114.0/255), blue: (1.0/255), alpha: 1.0)
-                annotationView.glyphImage = UIImage(named: "park")
-                annotationView.selectedGlyphImage = UIImage(named: "empire")
-            case "Empire State Building":
-                annotationView.markerTintColor = UIColor(red: (246.0/255), green: (233.0/255), blue: (212.0/255), alpha: 1.0)
-                annotationView.glyphImage = UIImage(named: "empire")
-            case "Brooklyn Bridge":
-                annotationView.markerTintColor = UIColor(red: (146.0/255), green: (187.0/255), blue: (217.0/255), alpha: 1.0)
-                annotationView.glyphImage = UIImage(named: "brooklyn")*/
             default:
                 pinView.markerTintColor = UIColor.blue
         }
