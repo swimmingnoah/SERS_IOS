@@ -155,7 +155,7 @@
 		B6A4A142270528990011DD8F /* SERS */ = {
 			isa = PBXGroup;
 			children = (
-				B6A4A18C2705488F0011DD8F /* GoogleService-Info.plist */,
+				B663879E27289699002B0F75 /* GoogleService-Info.plist */,
 				B6A4A173270528AF0011DD8F /* Resources */,
 				B6A4A174270528C00011DD8F /* ViewModels */,
 				B6A4A175270528D70011DD8F /* Models */,
@@ -266,7 +266,6 @@
 				B6A4A13D270528990011DD8F /* Frameworks */,
 				B6A4A13E270528990011DD8F /* Resources */,
 				C2412D13194EDC326F2FBD93 /* [CP] Embed Pods Frameworks */,
-				CA6EBD6C77B1EAADCF7C8B90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -422,23 +421,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SERS/Pods-SERS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CA6EBD6C77B1EAADCF7C8B90 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SERS/Pods-SERS-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SERS/Pods-SERS-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SERS/Pods-SERS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
