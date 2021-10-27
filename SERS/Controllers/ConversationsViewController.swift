@@ -93,7 +93,7 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
 		let vc = ChatViewController()
-		vc.title = "jenny smith"
+		vc.title = "MUPD"
 		vc.navigationItem.largeTitleDisplayMode = .never
 		navigationController?.pushViewController(vc, animated: true)
 	}
