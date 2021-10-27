@@ -237,30 +237,34 @@
             </objects>
             <point key="canvasLocation" x="438" y="139"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map Test View Controller-->
         <scene sceneID="Xmu-va-Smc">
             <objects>
-                <viewController id="u9m-zx-LKB" customClass="MapViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="u9m-zx-LKB" customClass="MapTestViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="03S-Gc-VOb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zmj-Me-uZ3">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nXM-MU-tDo">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <connections>
+                                    <outlet property="delegate" destination="u9m-zx-LKB" id="q2Q-SB-mcY"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="exe-yc-VJp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zmj-Me-uZ3" firstAttribute="bottom" secondItem="exe-yc-VJp" secondAttribute="bottom" id="CHv-d2-YaY"/>
-                            <constraint firstItem="zmj-Me-uZ3" firstAttribute="trailing" secondItem="exe-yc-VJp" secondAttribute="trailing" id="ezn-xu-6Za"/>
-                            <constraint firstItem="zmj-Me-uZ3" firstAttribute="top" secondItem="03S-Gc-VOb" secondAttribute="top" id="hi2-1W-ixS"/>
-                            <constraint firstItem="zmj-Me-uZ3" firstAttribute="leading" secondItem="exe-yc-VJp" secondAttribute="leading" id="koY-n7-jS9"/>
+                            <constraint firstItem="exe-yc-VJp" firstAttribute="bottom" secondItem="nXM-MU-tDo" secondAttribute="bottom" id="TE8-4x-eyg"/>
+                            <constraint firstItem="exe-yc-VJp" firstAttribute="trailing" secondItem="nXM-MU-tDo" secondAttribute="trailing" id="aI4-jK-VW8"/>
+                            <constraint firstItem="nXM-MU-tDo" firstAttribute="top" secondItem="03S-Gc-VOb" secondAttribute="top" id="bGd-xU-aGb"/>
+                            <constraint firstItem="nXM-MU-tDo" firstAttribute="leading" secondItem="exe-yc-VJp" secondAttribute="leading" id="tN4-b4-dqd"/>
+                            <constraint firstItem="nXM-MU-tDo" firstAttribute="top" secondItem="exe-yc-VJp" secondAttribute="top" id="xmV-d0-KP3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xvd-6k-s5v"/>
                     <connections>
-                        <outlet property="MapView" destination="zmj-Me-uZ3" id="YXJ-Xs-TBc"/>
+                        <outlet property="MapView" destination="nXM-MU-tDo" id="JiG-S4-D8p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCx-Qf-qmV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
