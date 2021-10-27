@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="sZF-8U-i0M">
-                                <rect key="frame" x="99.5" y="672" width="215" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="sZF-8U-i0M">
+                                <rect key="frame" x="64" y="682" width="286" height="69"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Click to start a Conversation"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Click to start a Conversation"/>
                                 <connections>
                                     <action selector="mupdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0R-Ko-cYY"/>
                                 </connections>
@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447.8260869565217" y="902.67857142857133"/>
+            <point key="canvasLocation" x="1446.376811594203" y="902.67857142857133"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="eFL-uB-XTg">
