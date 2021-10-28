@@ -297,8 +297,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="b0k-ib-wyr">
-                                <rect key="frame" x="0.0" y="211" width="414" height="216"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="shareplay" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ima-rh-ydP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="218"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="b0k-ib-wyr">
+                                <rect key="frame" x="14" y="253" width="414" height="216"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Of Incident:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeT-2c-gJG">
                                 <rect key="frame" x="33" y="140" width="131" height="21"/>
@@ -331,7 +334,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2h-O9-PdJ">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description Feild" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2h-O9-PdJ">
                                 <rect key="frame" x="54" y="672" width="295" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -349,15 +352,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ima-rh-ydP">
-                                <rect key="frame" x="109" y="184" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AVC-4L-H6W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="AVC-4L-H6W" firstAttribute="trailing" secondItem="UQ4-0q-o98" secondAttribute="trailing" constant="40" id="1wQ-uQ-5V5"/>
+                            <constraint firstItem="Ima-rh-ydP" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="5Fq-zd-Bxa"/>
                             <constraint firstItem="UQ4-0q-o98" firstAttribute="leading" secondItem="AVC-4L-H6W" secondAttribute="leading" constant="40" id="6fz-ci-94M"/>
                             <constraint firstItem="b0k-ib-wyr" firstAttribute="leading" secondItem="AVC-4L-H6W" secondAttribute="leading" id="8Qa-fS-f2q"/>
                             <constraint firstItem="AVC-4L-H6W" firstAttribute="trailing" secondItem="b0k-ib-wyr" secondAttribute="trailing" id="C2v-h9-dzY"/>
@@ -368,6 +368,7 @@
                             <constraint firstItem="WAw-uW-tV1" firstAttribute="leading" secondItem="MeT-2c-gJG" secondAttribute="leading" id="T2P-TF-x5w"/>
                             <constraint firstItem="UQ4-0q-o98" firstAttribute="top" secondItem="AVC-4L-H6W" secondAttribute="top" constant="600" id="f8e-3l-Xct"/>
                             <constraint firstItem="UQ4-0q-o98" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="myX-u3-ajD"/>
+                            <constraint firstItem="AVC-4L-H6W" firstAttribute="top" secondItem="Ima-rh-ydP" secondAttribute="top" constant="55" id="zvw-GL-JiH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZTa-X2-wxU"/>
@@ -466,6 +467,7 @@
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
+        <image name="shareplay" catalog="system" width="128" height="73"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="xmark.app" catalog="system" width="128" height="114"/>
