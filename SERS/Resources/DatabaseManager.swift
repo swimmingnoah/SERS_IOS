@@ -126,7 +126,6 @@ extension DatabaseManager {
 
 
 
-
 struct ChatAppUser {
 	let firstName: String
 	let lastName: String

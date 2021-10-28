@@ -32,19 +32,37 @@ class ChatViewController: MessagesViewController {
 	
 	private let selfSender = Sender(photoURL: "",
 									senderId: "1",
-									displayName: "Joe Smith")
+									displayName: "MUPD")
+    private let personSender = Sender(photoURL: "",
+                                    senderId: "2",
+                                    displayName: "Joe Smith")
+
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		messages.append(Message(sender: selfSender,
+		messages.append(Message(sender: personSender,
 								messageId: "1",
-								sentDate: Date(),
-								kind: .text("Hello world Message")))
-		messages.append(Message(sender: selfSender,
-								messageId: "1",
-								sentDate: Date(),
-								kind: .text("Hello world Message numbre 2 Hello world Message numbre 2 Hello world Message numbre 2")))
-		
+                                sentDate: Date(),
+                                kind: .text("Hello this is MUPD what is your emergency?")))
+        
+        messages.append(Message(sender: selfSender,
+                                messageId: "1",
+                                sentDate: Date(),
+                                kind: .text("Their is a school shooter in my classroom!")))
+        messages.append(Message(sender: personSender,
+                                messageId: "1",
+                                sentDate: Date(),
+                                kind: .text("Our records show that you are currently in Middlebush Hall is that correct?")))
+        messages.append(Message(sender: selfSender,
+                                messageId: "1",
+                                sentDate: Date(),
+                                kind: .text("yes")))
+        messages.append(Message(sender: personSender,
+                                messageId: "1",
+                                sentDate: Date(),
+                                kind: .text("Alright! the authorities are on their way and will be ariving in 3 min")))
+        
+        
 		
 		messagesCollectionView.messagesDataSource = self
 		messagesCollectionView.messagesLayoutDelegate = self
