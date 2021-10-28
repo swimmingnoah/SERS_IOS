@@ -26,12 +26,24 @@
                                     <action selector="mupdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0R-Ko-cYY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khR-ax-kXt">
+                                <rect key="frame" x="20" y="240" width="374" height="403"/>
+                                <string key="text">By starting a conversation you're agreeing to share your location, and are wanting to contact the police. This is the equivalent of dialing 911. Any misuse of this chat session will be investigated?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sZF-8U-i0M" secondAttribute="bottom" constant="110" id="bfy-dN-28E"/>
-                            <constraint firstItem="sZF-8U-i0M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sjH-mh-oQV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="khR-ax-kXt" secondAttribute="leading" constant="-20" id="Ain-m2-s85"/>
+                            <constraint firstItem="khR-ax-kXt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JCb-uV-i7A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sZF-8U-i0M" secondAttribute="bottom" constant="62" id="OL9-jF-lCT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="khR-ax-kXt" secondAttribute="bottom" constant="170" id="OR8-Tt-7XV"/>
+                            <constraint firstItem="sZF-8U-i0M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bvn-E3-QWY"/>
+                            <constraint firstItem="khR-ax-kXt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="ovg-M3-eJR"/>
+                            <constraint firstItem="khR-ax-kXt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="tb0-wt-GDQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MUPD" id="4rH-pF-gDq"/>
@@ -246,7 +258,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nXM-MU-tDo">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <connections>
                                     <outlet property="delegate" destination="u9m-zx-LKB" id="q2Q-SB-mcY"/>
                                 </connections>
