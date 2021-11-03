@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3iE-dx-Lcg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3iE-dx-Lcg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,7 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="sZF-8U-i0M">
-                                <rect key="frame" x="99.5" y="720" width="215" height="31"/>
+                                <rect key="frame" x="82" y="720" width="250" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="gpq-Zv-ZPH"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Click to start a Conversation"/>
                                 <connections>
@@ -28,7 +31,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khR-ax-kXt">
                                 <rect key="frame" x="20" y="240" width="374" height="403"/>
-                                <string key="text">By starting a conversation you're agreeing to share your location, and are wanting to contact the police. This is the equivalent of dialing 911. Any misuse of this chat session will be investigated?</string>
+                                <string key="text">By starting a conversation you're agreeing to share your location, and are wanting to contact the police. This is the equivalent of dialing 911. Any misuse of this chat session will be investigated.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -336,21 +339,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qu2-6e-hq3">
-                                <rect key="frame" x="40" y="461" width="334" height="31"/>
+                                <rect key="frame" x="82" y="720" width="250" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="mWw-G2-Sj0"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="square.and.pencil" catalog="system" title="New Tip" imagePadding="7"/>
                                 <connections>
                                     <segue destination="o52-KI-67F" kind="show" id="WQ0-6Z-Hqp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uR1-FQ-Nvb">
+                                <rect key="frame" x="20" y="240" width="374" height="403"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Shc-7j-0RG"/>
+                                    <constraint firstAttribute="height" constant="403" id="cQ8-LY-KIP"/>
+                                </constraints>
+                                <string key="text">By submitting a new tip, you are agreeing to share your location and contact information with the police. This should be treated with the importance of calling 911. Any misuse of this tip line will be investigated.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5XT-q0-Jac"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5XT-q0-Jac" firstAttribute="trailing" secondItem="qu2-6e-hq3" secondAttribute="trailing" constant="40" id="9s6-dJ-sEa"/>
-                            <constraint firstItem="qu2-6e-hq3" firstAttribute="centerY" secondItem="5XT-q0-Jac" secondAttribute="centerY" id="LdS-v7-0HN"/>
-                            <constraint firstItem="qu2-6e-hq3" firstAttribute="centerX" secondItem="5XT-q0-Jac" secondAttribute="centerX" id="Mgo-OE-Lex"/>
-                            <constraint firstItem="qu2-6e-hq3" firstAttribute="leading" secondItem="5XT-q0-Jac" secondAttribute="leading" constant="40" id="tNA-KA-QAR"/>
+                            <constraint firstItem="5XT-q0-Jac" firstAttribute="bottom" secondItem="uR1-FQ-Nvb" secondAttribute="bottom" constant="170" id="5yf-cF-b8s"/>
+                            <constraint firstItem="uR1-FQ-Nvb" firstAttribute="top" secondItem="5XT-q0-Jac" secondAttribute="top" constant="100" id="8PY-qs-mPJ"/>
+                            <constraint firstItem="5XT-q0-Jac" firstAttribute="bottom" secondItem="qu2-6e-hq3" secondAttribute="bottom" constant="62" id="W9H-e8-2Lq"/>
+                            <constraint firstItem="qu2-6e-hq3" firstAttribute="centerX" secondItem="uR1-FQ-Nvb" secondAttribute="centerX" id="X0c-JF-RNL"/>
+                            <constraint firstItem="qu2-6e-hq3" firstAttribute="top" secondItem="uR1-FQ-Nvb" secondAttribute="bottom" constant="77" id="eQi-nE-NBu"/>
+                            <constraint firstItem="uR1-FQ-Nvb" firstAttribute="centerX" secondItem="5XT-q0-Jac" secondAttribute="centerX" id="rgg-BX-2eU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Line" id="ygM-jX-JJd"/>
