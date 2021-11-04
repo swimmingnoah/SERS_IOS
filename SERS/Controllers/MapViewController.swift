@@ -163,14 +163,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         MapView.setRegion(region,
                           animated: true)
 //        createAnotations(locations: pins)
-        for pin in pins {
-            let annotations = MKPointAnnotation()
-            annotations.title = pin["name"] as? String
-            annotations.coordinate = CLLocationCoordinate2D(latitude: pin["Lat"] as! CLLocationDegrees,
-                                                            longitude: pin["Long"] as! CLLocationDegrees)
-            annotations.subtitle = pin["info"] as? String
-            MapView.addAnnotation(annotations)
-            }
+
 
 
         }

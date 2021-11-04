@@ -13,8 +13,10 @@ import CoreLocation
 class CustomAnnotation: MKPointAnnotation{
     var info: String?
 }
-
-class MapTestViewController: UIViewController, MKMapViewDelegate {
+//MKMapViewDelegate
+class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
+    
+    let manager = CLLocationManager()
 
     @IBOutlet private var mapView: MKMapView!
     
@@ -130,17 +132,45 @@ class MapTestViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-        self.setMap()
+//        self.setMap()
         self.createPins()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        self.mapView.showsUserLocation = true
         // Do any additional setup after loading the view.
     }
     
-    func setMap(){
-        let center = CLLocationCoordinate2D(latitude: 38.9404, longitude: -92.3277)
-        let span = MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)
-        let region = MKCoordinateRegion(center: center, span: span)
-        mapView.setRegion(region, animated: true)
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            manager.stopUpdatingLocation()
+
+            render(location)
+        }
     }
+    
+    func render(_ location: CLLocation){
+        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
+                                                longitude: location.coordinate.longitude)
+
+        let span = MKCoordinateSpan(latitudeDelta: 0.03,
+                                    longitudeDelta: 0.03)
+
+        let region = MKCoordinateRegion(center: coordinate,
+                                        span: span)
+        self.mapView.setRegion(region,
+                          animated: true)
+    }
+    
+//    func setMap(){
+//        let center = CLLocationCoordinate2D(latitude: 38.9404, longitude: -92.3277)
+//        let span = MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)
+//        let region = MKCoordinateRegion(center: center, span: span)
+//        self.mapView.setRegion(region, animated: true)
+//    }
     
     func createPins(){
         for pin in pins {
@@ -151,22 +181,38 @@ class MapTestViewController: UIViewController, MKMapViewDelegate {
                 latitude: pin["Lat"] as! CLLocationDegrees,
                 longitude: pin["Long"] as! CLLocationDegrees)
             annotations.subtitle = pin["info"] as? String
-            mapView.addAnnotation(annotations)
+            self.mapView.addAnnotation(annotations)
             }
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        //        print(String(describing: annotation))
         let pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
         //  annotationView.glyphTintColor = UIColor.black
-        switch annotation.subtitle!! {
-        
-        case "Police station":
-            pinView.markerTintColor = UIColor.red
-        case "YELLOW BOX":
-            pinView.markerTintColor = UIColor.yellow
-            default:
-                pinView.markerTintColor = UIColor.blue
+        //        print(annotation.debugDescription)
+        if annotation is MKUserLocation {
+            
+            
+            
+            //            print("found user ")
+            //            pinView.markerTintColor = UIColor.green
+            let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "userLocation")
+            annotationView.image = UIImage(systemName:"location")
+            return annotationView
         }
+        if let subtitle = annotation.subtitle{
+            //            print("subtitle = \(subtitle)")
+            switch subtitle {
+
+            case "Police station":
+                pinView.markerTintColor = UIColor.red
+            case "YELLOW BOX":
+                pinView.markerTintColor = UIColor.yellow
+                default:
+                    pinView.markerTintColor = UIColor.blue
+            }
+        }
+
         return pinView
     }
     
