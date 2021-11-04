@@ -8,10 +8,17 @@
 import UIKit
 
 class TipLineFormViewController: UIViewController {
-
+    
+    @IBOutlet weak var textDescription: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        textDescription.text = "Placeholder"
+        textDescription.textColor = UIColor.lightGray
 
+        textDescription.becomeFirstResponder()
+
+        textDescription.selectedTextRange = textDescription.textRange(from: textDescription.beginningOfDocument, to: textDescription.beginningOfDocument)
         // Do any additional setup after loading the view.
     }
     

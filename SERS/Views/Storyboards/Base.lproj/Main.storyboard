@@ -455,7 +455,7 @@
                                     <constraint firstAttribute="width" constant="320" id="ob7-RF-VN9"/>
                                 </constraints>
                             </datePicker>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Describe the incident here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RNa-2s-ven">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RNa-2s-ven">
                                 <rect key="frame" x="47" y="691" width="320" height="102"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -481,12 +481,12 @@
                             <constraint firstItem="RNa-2s-ven" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="Rdh-EY-e0z"/>
                             <constraint firstItem="UQ4-0q-o98" firstAttribute="top" secondItem="AVC-4L-H6W" secondAttribute="top" constant="661" id="T7s-5W-kff"/>
                             <constraint firstItem="UK4-PW-Heb" firstAttribute="top" secondItem="X7H-Zt-VqQ" secondAttribute="bottom" constant="8" symbolic="YES" id="WYJ-dp-Jzc"/>
-                            <constraint firstItem="RNa-2s-ven" firstAttribute="top" secondItem="AVC-4L-H6W" secondAttribute="top" constant="551" id="XbM-EV-wBB"/>
                             <constraint firstItem="WAw-uW-tV1" firstAttribute="top" secondItem="2WA-D4-f0r" secondAttribute="bottom" constant="8" symbolic="YES" id="ffP-32-Cqy"/>
                             <constraint firstItem="UQ4-0q-o98" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="gFU-Ol-hkP"/>
                             <constraint firstItem="AVC-4L-H6W" firstAttribute="bottom" secondItem="Ima-rh-ydP" secondAttribute="bottom" constant="550" id="gJ4-rX-7if"/>
                             <constraint firstItem="MeT-2c-gJG" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="lFH-hL-Jcn"/>
                             <constraint firstItem="WAw-uW-tV1" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="mlJ-AN-7ki"/>
+                            <constraint firstItem="RNa-2s-ven" firstAttribute="top" secondItem="WAw-uW-tV1" secondAttribute="bottom" constant="6" id="pO5-aP-geY"/>
                             <constraint firstItem="UQ4-0q-o98" firstAttribute="top" secondItem="RNa-2s-ven" secondAttribute="bottom" constant="8" symbolic="YES" id="sPR-58-lwy"/>
                             <constraint firstItem="2WA-D4-f0r" firstAttribute="top" secondItem="UK4-PW-Heb" secondAttribute="bottom" constant="8.5" id="vta-66-Z9K"/>
                             <constraint firstItem="UK4-PW-Heb" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="wy0-UE-GDx"/>
@@ -495,6 +495,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZTa-X2-wxU"/>
+                    <connections>
+                        <outlet property="textDescription" destination="RNa-2s-ven" id="dmf-NI-NEE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G13-lr-Aed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
