@@ -234,11 +234,11 @@
 				B6A4A18227052A810011DD8F /* PhotoViewController.swift */,
 				B6A67EEC272A3B6300EBD37E /* HelpInfoViewController.swift */,
 				B6A4A18627052AAC0011DD8F /* NewConversationViewController.swift */,
+				B6F1587E270C01EE00DEE09B /* MapViewController.swift */,
 				B60033B0272F38F60036DF63 /* MapTestViewController.swift */,
 				B6441A692729F0340015ECAF /* MUPDViewController.swift */,
 				B6A4A18827052AB80011DD8F /* ProfileViewController.swift */,
 				B6B1CD642709260100D6CF8E /* ChatViewController.swift */,
-				B6F1587E270C01EE00DEE09B /* MapViewController.swift */,
 				B63C0EE62715168100922264 /* SlideToConfirmViewController.swift */,
 				B63C0EE827151BC100922264 /* ConfirmViewController.swift */,
 			);

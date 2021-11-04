@@ -482,7 +482,7 @@
         <scene sceneID="pw6-bm-8NH">
             <objects>
                 <navigationController id="apR-QT-tDc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tip Line" image="xmark.bin" catalog="system" selectedImage="xmark.app" id="68A-Dt-fZB"/>
+                    <tabBarItem key="tabBarItem" title="Tip Line" image="xmark.bin" catalog="system" selectedImage="location" id="68A-Dt-fZB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="iAF-zu-Q6O">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -521,7 +521,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="xvd-6k-s5v"/>
                     <connections>
-                        <outlet property="MapView" destination="nXM-MU-tDo" id="JiG-S4-D8p"/>
+                        <outlet property="MapView" destination="nXM-MU-tDo" id="pGu-pl-IJ5"/>
+                        <outlet property="mapView" destination="nXM-MU-tDo" id="ByR-jI-dXC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCx-Qf-qmV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -564,13 +565,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="location" catalog="system" width="128" height="118"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
         <image name="shareplay" catalog="system" width="128" height="73"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
-        <image name="xmark.app" catalog="system" width="128" height="114"/>
         <image name="xmark.bin" catalog="system" width="128" height="93"/>
         <namedColor name="outgoingMessageBackground">
             <color red="0.20399998128414154" green="0.77999997138977051" blue="0.34899997711181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
