@@ -459,7 +459,8 @@
                                 <rect key="frame" x="47" y="691" width="320" height="102"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="BtP-in-Ctd"/>
+                                    <constraint firstAttribute="height" constant="102" id="D3Q-Jy-Ldt"/>
+                                    <constraint firstAttribute="width" constant="320" id="THM-sb-BQF"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -477,8 +478,8 @@
                             <constraint firstItem="MeT-2c-gJG" firstAttribute="top" secondItem="Ima-rh-ydP" secondAttribute="bottom" constant="8" symbolic="YES" id="HFe-Sm-Jt2"/>
                             <constraint firstItem="X7H-Zt-VqQ" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="NnR-lh-KxV"/>
                             <constraint firstItem="2WA-D4-f0r" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="OFa-YV-grO"/>
+                            <constraint firstItem="RNa-2s-ven" firstAttribute="top" secondItem="WAw-uW-tV1" secondAttribute="bottom" constant="6" id="P1d-RT-NTB"/>
                             <constraint firstItem="b0k-ib-wyr" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="PDk-1b-Edk"/>
-                            <constraint firstItem="RNa-2s-ven" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="Rdh-EY-e0z"/>
                             <constraint firstItem="UQ4-0q-o98" firstAttribute="top" secondItem="AVC-4L-H6W" secondAttribute="top" constant="661" id="T7s-5W-kff"/>
                             <constraint firstItem="UK4-PW-Heb" firstAttribute="top" secondItem="X7H-Zt-VqQ" secondAttribute="bottom" constant="8" symbolic="YES" id="WYJ-dp-Jzc"/>
                             <constraint firstItem="WAw-uW-tV1" firstAttribute="top" secondItem="2WA-D4-f0r" secondAttribute="bottom" constant="8" symbolic="YES" id="ffP-32-Cqy"/>
@@ -486,9 +487,8 @@
                             <constraint firstItem="AVC-4L-H6W" firstAttribute="bottom" secondItem="Ima-rh-ydP" secondAttribute="bottom" constant="550" id="gJ4-rX-7if"/>
                             <constraint firstItem="MeT-2c-gJG" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="lFH-hL-Jcn"/>
                             <constraint firstItem="WAw-uW-tV1" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="mlJ-AN-7ki"/>
-                            <constraint firstItem="RNa-2s-ven" firstAttribute="top" secondItem="WAw-uW-tV1" secondAttribute="bottom" constant="6" id="pO5-aP-geY"/>
-                            <constraint firstItem="UQ4-0q-o98" firstAttribute="top" secondItem="RNa-2s-ven" secondAttribute="bottom" constant="8" symbolic="YES" id="sPR-58-lwy"/>
                             <constraint firstItem="2WA-D4-f0r" firstAttribute="top" secondItem="UK4-PW-Heb" secondAttribute="bottom" constant="8.5" id="vta-66-Z9K"/>
+                            <constraint firstItem="RNa-2s-ven" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="wEP-kG-kEj"/>
                             <constraint firstItem="UK4-PW-Heb" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="wy0-UE-GDx"/>
                             <constraint firstItem="AVC-4L-H6W" firstAttribute="top" secondItem="Ima-rh-ydP" secondAttribute="top" constant="22" id="zaS-86-3UX"/>
                             <constraint firstItem="b0k-ib-wyr" firstAttribute="top" secondItem="MeT-2c-gJG" secondAttribute="bottom" constant="6.5" id="zoF-ue-v8d"/>

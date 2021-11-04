@@ -13,12 +13,9 @@ class TipLineFormViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textDescription.text = "Placeholder"
-        textDescription.textColor = UIColor.lightGray
-
-        textDescription.becomeFirstResponder()
-
-        textDescription.selectedTextRange = textDescription.textRange(from: textDescription.beginningOfDocument, to: textDescription.beginningOfDocument)
+        textDescription.layer.borderColor = UIColor.lightGray.cgColor
+        textDescription.layer.borderWidth = 1
+        textDescription.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
     }
     
