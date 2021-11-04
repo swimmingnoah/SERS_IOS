@@ -333,7 +333,7 @@
         <!--Tip Line-->
         <scene sceneID="7W5-Cf-jGM">
             <objects>
-                <viewController id="TZK-PL-eBT" sceneMemberID="viewController">
+                <viewController id="TZK-PL-eBT" customClass="TipLineViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e0I-SZ-rK5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,10 +378,10 @@
             </objects>
             <point key="canvasLocation" x="438" y="903"/>
         </scene>
-        <!--View Controller-->
+        <!--Tip Line Form View Controller-->
         <scene sceneID="5f7-6C-36J">
             <objects>
-                <viewController id="o52-KI-67F" sceneMemberID="viewController">
+                <viewController id="o52-KI-67F" customClass="TipLineFormViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kg0-CK-iX6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
