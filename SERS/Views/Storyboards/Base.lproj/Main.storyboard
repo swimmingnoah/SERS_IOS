@@ -476,11 +476,11 @@
                             <constraint firstItem="Xqk-bu-qpX" firstAttribute="firstBaseline" secondItem="b0k-ib-wyr" secondAttribute="baseline" constant="24.5" symbolType="layoutAnchor" id="8Ta-bp-KXk"/>
                             <constraint firstItem="Ima-rh-ydP" firstAttribute="leading" secondItem="AVC-4L-H6W" secondAttribute="leading" id="EtX-Et-0i6"/>
                             <constraint firstItem="MeT-2c-gJG" firstAttribute="top" secondItem="Ima-rh-ydP" secondAttribute="bottom" constant="8" symbolic="YES" id="HFe-Sm-Jt2"/>
+                            <constraint firstItem="UQ4-0q-o98" firstAttribute="top" secondItem="RNa-2s-ven" secondAttribute="bottom" constant="8" symbolic="YES" id="IRR-uc-c3g"/>
                             <constraint firstItem="X7H-Zt-VqQ" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="NnR-lh-KxV"/>
                             <constraint firstItem="2WA-D4-f0r" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="OFa-YV-grO"/>
                             <constraint firstItem="RNa-2s-ven" firstAttribute="top" secondItem="WAw-uW-tV1" secondAttribute="bottom" constant="6" id="P1d-RT-NTB"/>
                             <constraint firstItem="b0k-ib-wyr" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="PDk-1b-Edk"/>
-                            <constraint firstItem="UQ4-0q-o98" firstAttribute="top" secondItem="AVC-4L-H6W" secondAttribute="top" constant="661" id="T7s-5W-kff"/>
                             <constraint firstItem="UK4-PW-Heb" firstAttribute="top" secondItem="X7H-Zt-VqQ" secondAttribute="bottom" constant="8" symbolic="YES" id="WYJ-dp-Jzc"/>
                             <constraint firstItem="WAw-uW-tV1" firstAttribute="top" secondItem="2WA-D4-f0r" secondAttribute="bottom" constant="8" symbolic="YES" id="ffP-32-Cqy"/>
                             <constraint firstItem="UQ4-0q-o98" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="gFU-Ol-hkP"/>
