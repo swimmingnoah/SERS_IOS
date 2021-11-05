@@ -200,16 +200,23 @@ class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManag
             annotationView.image = UIImage(systemName:"location")
             return annotationView
         }
+        
+        let boxImage = UIImage(systemName: "archivebox.circle")
+        let policeSirenImage = UIImage(named: "PoliceSiren")
+        let towerImage = UIImage(named: "Tower")
         if let subtitle = annotation.subtitle{
             //            print("subtitle = \(subtitle)")
             switch subtitle {
 
             case "Police station":
-                pinView.markerTintColor = UIColor.red
+                pinView.markerTintColor = UIColor.blue
+                pinView.glyphImage = policeSirenImage
             case "YELLOW BOX":
                 pinView.markerTintColor = UIColor.yellow
-                default:
-                    pinView.markerTintColor = UIColor.blue
+                pinView.glyphImage = boxImage
+            default:
+                pinView.markerTintColor = UIColor.red
+                pinView.glyphImage = towerImage
             }
         }
 
