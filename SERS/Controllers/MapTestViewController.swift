@@ -20,6 +20,8 @@ class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManag
 
     @IBOutlet private var mapView: MKMapView!
     
+    @IBOutlet weak var legendButton: UIBarButtonItem!
+    
     let pins = [
         ["id":1, "name": "Mick Deaver Memorial DR", "Lat":38.929933587638, "Long":-92.3361760127787, "info": "Next to MU Recreation Trail" ],
         ["id":2, "name": "Research Park Drive", "Lat":38.9293696627297, "Long":-92.3406865985162, "info": "Next to RP 10" ],
