@@ -565,7 +565,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdi-C1-g1d">
                                 <rect key="frame" x="15" y="155" width="384" height="658"/>
                                 <string key="text">The profile page is meant to store your name, phone number, and email. This information will be automatically filled in while reporting a tip or contacting emergency responders. This is to help emergency responders react quickly to emergency situations.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
