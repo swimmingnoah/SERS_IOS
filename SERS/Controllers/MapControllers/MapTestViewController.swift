@@ -137,18 +137,12 @@ class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManag
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-//        self.setMap()
         self.createPins()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
-        
-        print("yes sir")
-        
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
-        
-        //legendButton.addTarget(self, action: #selector(tapOnButton), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
 
@@ -172,13 +166,6 @@ class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManag
         self.mapView.setRegion(region,
                           animated: true)
     }
-    
-//    func setMap(){
-//        let center = CLLocationCoordinate2D(latitude: 38.9404, longitude: -92.3277)
-//        let span = MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)
-//        let region = MKCoordinateRegion(center: center, span: span)
-//        self.mapView.setRegion(region, animated: true)
-//    }
     
     func createPins(){
         for pin in pins {
