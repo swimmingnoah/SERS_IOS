@@ -9,11 +9,12 @@ import UIKit
 
 class MapLegendViewController: UIViewController {
 
+    @IBOutlet weak var towerLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //view.backgroundColor = .systemBlue
-        
-        print("All hail the rat king")
+        view.backgroundColor = .systemGray
         // Do any additional setup after loading the view.
     }
     
