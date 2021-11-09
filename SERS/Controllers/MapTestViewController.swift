@@ -20,7 +20,10 @@ class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManag
 
     @IBOutlet private var mapView: MKMapView!
     
-    @IBOutlet weak var legendButton: UIBarButtonItem!
+
+    @IBAction func toMapView(_ sender: Any) {
+
+    }
     
     let pins = [
         ["id":1, "name": "Mick Deaver Memorial DR", "Lat":38.929933587638, "Long":-92.3361760127787, "info": "Next to MU Recreation Trail" ],
@@ -139,13 +142,16 @@ class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManag
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         
+        print("yes sir")
         
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
+        
+        //legendButton.addTarget(self, action: #selector(tapOnButton), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             manager.stopUpdatingLocation()
@@ -176,7 +182,7 @@ class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManag
     
     func createPins(){
         for pin in pins {
-            let annotations = CustomAnnotation()
+            let annotations = MKPointAnnotation()
             //let annotations = MyPointAnnotation(pinColor: UIColor.blue)
             annotations.title = pin["name"] as? String
             annotations.coordinate = CLLocationCoordinate2D(

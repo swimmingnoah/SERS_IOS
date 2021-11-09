@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3iE-dx-Lcg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3iE-dx-Lcg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -275,7 +274,7 @@
         <!--Map-->
         <scene sceneID="tys-DP-1bw">
             <objects>
-                <navigationController id="t2i-PB-5LG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MapView" id="t2i-PB-5LG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" selectedImage="map" id="EcT-Vg-yZw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Zcp-yJ-aXU">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -518,7 +517,7 @@
         <!--Map Test View Controller-->
         <scene sceneID="Xmu-va-Smc">
             <objects>
-                <viewController id="u9m-zx-LKB" customClass="MapTestViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="u9m-zx-LKB" customClass="MapTestViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="03S-Gc-VOb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -541,26 +540,22 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="xvd-6k-s5v">
-                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="HXN-6C-y5b">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Wmr-gs-eqy" customClass="Legend">
-                                <rect key="frame" x="20" y="1" width="29" height="42"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Gcx-pr-z1X">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HSU-nC-DEg">
+                                <rect key="frame" x="70" y="202" width="42" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <menu key="menu" title="Legend" id="mFa-Cu-Cry">
-                                    <children>
-                                        <command title="The Red tower is a Emergcny Call Tower" input="H" id="9Cg-d7-bf9"/>
-                                        <command title="The Yellow box is a Emergency Call Box" id="tui-UE-Yhy"/>
-                                    </children>
-                                </menu>
-                                <state key="normal">
-                                    <imageReference key="image" image="doc.text.fill" catalog="system" symbolScale="large"/>
-                                </state>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="doc.fill" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="toMapView:" destination="u9m-zx-LKB" eventType="touchUpInside" id="vOF-I9-M2S"/>
+                                    <segue destination="lLJ-CO-75R" kind="show" id="OjK-Rq-Ndo"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MapView" destination="nXM-MU-tDo" id="pGu-pl-IJ5"/>
-                        <outlet property="legendButton" destination="HXN-6C-y5b" id="nrS-g7-s1b"/>
                         <outlet property="mapView" destination="nXM-MU-tDo" id="ByR-jI-dXC"/>
                     </connections>
                 </viewController>
@@ -602,9 +597,34 @@
             </objects>
             <point key="canvasLocation" x="3573.913043478261" y="1749.7767857142856"/>
         </scene>
+        <!--Map Legend View Controller-->
+        <scene sceneID="1m5-Yb-Bc2">
+            <objects>
+                <viewController storyboardIdentifier="MapLegend" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lLJ-CO-75R" customClass="MapLegendViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dsw-8T-SYn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Socerccy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNM-rq-kds">
+                                <rect key="frame" x="156" y="345" width="72" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7rJ-gb-XtS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PyA-ZQ-HLw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRt-Rj-Nps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449.27536231884062" y="1642.6339285714284"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+        <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="location" catalog="system" width="128" height="118"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="pencil" catalog="system" width="128" height="113"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3DEC3A7F337D1A08F5A40AC8 /* Pods_SERS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7FCA05111E0420AD5F6A2BB /* Pods_SERS.framework */; };
+		64B8E2D02739D53700AEAFA6 /* MapLegendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8E2CF2739D53700AEAFA6 /* MapLegendViewController.swift */; };
 		B60033B1272F38F60036DF63 /* MapTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60033B0272F38F60036DF63 /* MapTestViewController.swift */; };
 		B60033B3272F3C7B0036DF63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B60033B2272F3C7B0036DF63 /* GoogleService-Info.plist */; };
 		B63C0EE72715168100922264 /* SlideToConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C0EE62715168100922264 /* SlideToConfirmViewController.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		4B0539FFA23AFF8B4BB335EB /* Pods-SERS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SERS.release.xcconfig"; path = "Target Support Files/Pods-SERS/Pods-SERS.release.xcconfig"; sourceTree = "<group>"; };
+		64B8E2CF2739D53700AEAFA6 /* MapLegendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLegendViewController.swift; sourceTree = "<group>"; };
 		AFCAB4A265E1CBF3A206C878 /* Pods-SERS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SERS.debug.xcconfig"; path = "Target Support Files/Pods-SERS/Pods-SERS.debug.xcconfig"; sourceTree = "<group>"; };
 		B60033B0272F38F60036DF63 /* MapTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTestViewController.swift; sourceTree = "<group>"; };
 		B60033B2272F3C7B0036DF63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				B6A4A18627052AAC0011DD8F /* NewConversationViewController.swift */,
 				B6F1587E270C01EE00DEE09B /* MapViewController.swift */,
 				B60033B0272F38F60036DF63 /* MapTestViewController.swift */,
+				64B8E2CF2739D53700AEAFA6 /* MapLegendViewController.swift */,
 				B6441A692729F0340015ECAF /* MUPDViewController.swift */,
 				B6A4A18827052AB80011DD8F /* ProfileViewController.swift */,
 				B6B1CD642709260100D6CF8E /* ChatViewController.swift */,
@@ -455,6 +458,7 @@
 				B6A4A144270528990011DD8F /* AppDelegate.swift in Sources */,
 				B6B1CD652709260100D6CF8E /* ChatViewController.swift in Sources */,
 				B60033B1272F38F60036DF63 /* MapTestViewController.swift in Sources */,
+				64B8E2D02739D53700AEAFA6 /* MapLegendViewController.swift in Sources */,
 				B6A4A146270528990011DD8F /* SceneDelegate.swift in Sources */,
 				B6B1CD67270AA92D00D6CF8E /* StorageManager.swift in Sources */,
 				B6F1587F270C01EE00DEE09B /* MapViewController.swift in Sources */,
