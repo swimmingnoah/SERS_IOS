@@ -412,10 +412,10 @@
             </objects>
             <point key="canvasLocation" x="438" y="903"/>
         </scene>
-        <!--View Controller-->
+        <!--Tip View Controller-->
         <scene sceneID="5f7-6C-36J">
             <objects>
-                <viewController id="o52-KI-67F" sceneMemberID="viewController">
+                <viewController id="o52-KI-67F" customClass="TipViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kg0-CK-iX6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,6 +457,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                <connections>
+                                    <action selector="tipSubmitButtonPressed:" destination="o52-KI-67F" eventType="touchUpInside" id="m4k-zq-laN"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description Feild" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2h-O9-PdJ">
                                 <rect key="frame" x="47" y="693.5" width="320" height="34"/>
@@ -526,6 +529,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZTa-X2-wxU"/>
+                    <connections>
+                        <outlet property="firstName" destination="X7H-Zt-VqQ" id="vlw-e8-PXc"/>
+                        <outlet property="incidentDesc" destination="b2h-O9-PdJ" id="nnH-4b-uRm"/>
+                        <outlet property="incidentTimeAndDate" destination="b0k-ib-wyr" id="MSC-YZ-u1p"/>
+                        <outlet property="lastName" destination="2WA-D4-f0r" id="WFQ-iU-OBU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G13-lr-Aed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

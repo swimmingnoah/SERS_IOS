@@ -28,13 +28,19 @@ class NewProfileViewController: UIViewController {
 //        ref = Database.database().reference()
 //        let userID = Auth.auth().currentUser?.uid
         
-        let fname = fnameField.text!
-        let lname = lnameField.text!
-        let email = emailField.text!
-        let phoneNum = phoneNumField.text!
+//        let fname = fnameField.text!
+//        let lname = lnameField.text!
+//        let email = emailField.text!
+//        let phoneNum = phoneNumField.text!
         
-        print(fname, lname, email, phoneNum)
+        let userData = [
+            "fname": fnameField.text!,
+            "lname": lnameField.text!,
+            "email": emailField.text!,
+            "phoneNum": phoneNumField.text!
+        ]
         
+        print(userData)
         
     }
 
