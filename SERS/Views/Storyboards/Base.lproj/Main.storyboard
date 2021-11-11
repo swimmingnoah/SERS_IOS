@@ -77,7 +77,7 @@
         <!--Profile-->
         <scene sceneID="PjJ-i7-5qj">
             <objects>
-                <viewController id="UA1-gD-Pi3" sceneMemberID="viewController">
+                <viewController id="UA1-gD-Pi3" customClass="NewProfileViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wN9-tB-BfG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,6 +88,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Submit">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="UA1-gD-Pi3" eventType="touchUpInside" id="VaR-6G-Ujf"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndo-1z-IgS">
                                 <rect key="frame" x="50" y="213" width="324" height="34"/>
@@ -170,6 +173,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Esf-51-Z7C"/>
+                    <connections>
+                        <outlet property="emailField" destination="VCz-tx-2mY" id="QOF-OA-6iM"/>
+                        <outlet property="fnameField" destination="ndo-1z-IgS" id="rPT-Dt-JTP"/>
+                        <outlet property="lnameField" destination="ehU-9u-KRW" id="YRq-Sv-NL7"/>
+                        <outlet property="phoneNumField" destination="fmV-lT-KYr" id="BlU-aW-Ock"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdq-jD-rgt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
