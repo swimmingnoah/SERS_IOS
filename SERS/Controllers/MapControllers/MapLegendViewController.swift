@@ -14,7 +14,12 @@ class MapLegendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //view.backgroundColor = .systemBlue
-        view.backgroundColor = .systemGray
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "Backdrop")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
+        //view.backgroundColor = .systemGray
         // Do any additional setup after loading the view.
     }
     
