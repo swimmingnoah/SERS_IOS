@@ -9,11 +9,6 @@ import UIKit
 import MapKit
 import CoreLocation
 
-
-class CustomAnnotation: MKPointAnnotation{
-    var info: String?
-}
-//MKMapViewDelegate
 class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
     
     let manager = CLLocationManager()
