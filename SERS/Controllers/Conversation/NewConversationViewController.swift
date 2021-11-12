@@ -8,7 +8,7 @@
 import UIKit
 import JGProgressHUD
 
-class NewConversationViewController: UIViewController {
+class NewConversationViewController: SuperViewController {
 	
 	private let spinner = JGProgressHUD()
 	
