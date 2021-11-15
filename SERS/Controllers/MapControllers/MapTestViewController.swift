@@ -9,16 +9,16 @@ import UIKit
 import MapKit
 import CoreLocation
 
-
-class CustomAnnotation: MKPointAnnotation{
-    var info: String?
-}
-//MKMapViewDelegate
 class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
     
     let manager = CLLocationManager()
 
     @IBOutlet private var mapView: MKMapView!
+    
+
+    @IBAction func toMapView(_ sender: Any) {
+
+    }
     
     let pins = [
         ["id":1, "name": "Mick Deaver Memorial DR", "Lat":38.929933587638, "Long":-92.3361760127787, "info": "Next to MU Recreation Trail" ],
@@ -132,18 +132,15 @@ class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManag
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-//        self.setMap()
         self.createPins()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
-        
-        
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
         // Do any additional setup after loading the view.
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             manager.stopUpdatingLocation()
@@ -165,16 +162,9 @@ class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManag
                           animated: true)
     }
     
-//    func setMap(){
-//        let center = CLLocationCoordinate2D(latitude: 38.9404, longitude: -92.3277)
-//        let span = MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)
-//        let region = MKCoordinateRegion(center: center, span: span)
-//        self.mapView.setRegion(region, animated: true)
-//    }
-    
     func createPins(){
         for pin in pins {
-            let annotations = CustomAnnotation()
+            let annotations = MKPointAnnotation()
             //let annotations = MyPointAnnotation(pinColor: UIColor.blue)
             annotations.title = pin["name"] as? String
             annotations.coordinate = CLLocationCoordinate2D(
@@ -200,16 +190,23 @@ class MapTestViewController: UIViewController,MKMapViewDelegate, CLLocationManag
             annotationView.image = UIImage(systemName:"location")
             return annotationView
         }
+        
+        let boxImage = UIImage(systemName: "archivebox.circle")
+        let policeSirenImage = UIImage(named: "PoliceSiren")
+        let towerImage = UIImage(named: "Tower")
         if let subtitle = annotation.subtitle{
             //            print("subtitle = \(subtitle)")
             switch subtitle {
 
             case "Police station":
-                pinView.markerTintColor = UIColor.red
+                pinView.markerTintColor = UIColor.blue
+                pinView.glyphImage = policeSirenImage
             case "YELLOW BOX":
                 pinView.markerTintColor = UIColor.yellow
-                default:
-                    pinView.markerTintColor = UIColor.blue
+                pinView.glyphImage = boxImage
+            default:
+                pinView.markerTintColor = UIColor.red
+                pinView.glyphImage = towerImage
             }
         }
 

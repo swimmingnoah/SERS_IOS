@@ -17,11 +17,18 @@ class ProfileViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-//		tableView.register(UITableViewCell.self,
-//						   forCellReuseIdentifier: "cell")
-//		tableView.delegate = self
-//		tableView.dataSource = self
-//		tableView.tableHeaderView = createTabelHeader()
+		tableView.register(UITableViewCell.self,
+						   forCellReuseIdentifier: "cell")
+		tableView.delegate = self
+		tableView.dataSource = self
+		tableView.tableHeaderView = createTabelHeader()
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "Backdrop")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
+        
 	}
 //	func createTabelHeader() -> UIView? {
 //		guard let email = UserDefaults.standard.value(forKey: "email") as? String else {

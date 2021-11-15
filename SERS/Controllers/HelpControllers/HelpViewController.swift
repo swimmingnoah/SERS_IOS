@@ -23,7 +23,7 @@ class HelpViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        view.backgroundColor = UIColor(red: 227/250, green: 218/250, blue: 201/250, alpha: 1)
         // Do any additional setup after loading the view.
     }
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3iE-dx-Lcg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3iE-dx-Lcg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -308,7 +308,7 @@
         <!--Map-->
         <scene sceneID="tys-DP-1bw">
             <objects>
-                <navigationController id="t2i-PB-5LG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MapView" id="t2i-PB-5LG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" selectedImage="map" id="EcT-Vg-yZw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Zcp-yJ-aXU">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -560,13 +560,13 @@
         <!--Map Test View Controller-->
         <scene sceneID="Xmu-va-Smc">
             <objects>
-                <viewController id="u9m-zx-LKB" customClass="MapTestViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="u9m-zx-LKB" customClass="MapTestViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="03S-Gc-VOb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nXM-MU-tDo">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                                 <connections>
                                     <outlet property="delegate" destination="u9m-zx-LKB" id="q2Q-SB-mcY"/>
                                 </connections>
@@ -581,7 +581,22 @@
                             <constraint firstItem="nXM-MU-tDo" firstAttribute="leading" secondItem="exe-yc-VJp" secondAttribute="leading" id="tN4-b4-dqd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xvd-6k-s5v"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="xvd-6k-s5v">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Gcx-pr-z1X">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HSU-nC-DEg">
+                                <rect key="frame" x="20" y="5" width="46" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="doc.fill" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="toMapView:" destination="u9m-zx-LKB" eventType="touchUpInside" id="vOF-I9-M2S"/>
+                                    <segue destination="lLJ-CO-75R" kind="show" id="OjK-Rq-Ndo"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MapView" destination="nXM-MU-tDo" id="pGu-pl-IJ5"/>
                         <outlet property="mapView" destination="nXM-MU-tDo" id="ByR-jI-dXC"/>
@@ -625,8 +640,65 @@
             </objects>
             <point key="canvasLocation" x="3573.913043478261" y="1749.7767857142856"/>
         </scene>
+        <!--Map Legend View Controller-->
+        <scene sceneID="1m5-Yb-Bc2">
+            <objects>
+                <viewController storyboardIdentifier="MapLegend" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lLJ-CO-75R" customClass="MapLegendViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dsw-8T-SYn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tower" translatesAutoresizingMaskIntoConstraints="NO" id="ywq-Hc-mtn">
+                                <rect key="frame" x="0.0" y="153" width="139" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The icon to the left represents the emergency towers. These towers are scattetered throughtout campus. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIU-J9-zgR">
+                                <rect key="frame" x="147" y="113" width="247" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" systemColor="systemGray4Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PoliceSiren" translatesAutoresizingMaskIntoConstraints="NO" id="bx5-o2-M0o">
+                                <rect key="frame" x="0.0" y="574" width="139" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="archivebox.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fua-eG-AyG">
+                                <rect key="frame" x="0.0" y="353.5" width="139" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="label"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The icon to the left represents the emergency yellow boxes. They are found around parking structures or droms." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRF-uC-lHu">
+                                <rect key="frame" x="147" y="334" width="247" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" systemColor="systemGray4Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The icon to the left represents the MUPD station founded at the bottom of Virginia Avune parking strucutre." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zA1-tX-7A8">
+                                <rect key="frame" x="147" y="550" width="255" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" systemColor="systemGray4Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7rJ-gb-XtS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PyA-ZQ-HLw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRt-Rj-Nps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449.27536231884062" y="1642.6339285714284"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="PoliceSiren" width="512" height="512"/>
+        <image name="Tower" width="490" height="490"/>
+        <image name="archivebox.circle" catalog="system" width="128" height="121"/>
+        <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="location" catalog="system" width="128" height="118"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
@@ -635,11 +707,20 @@
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="xmark.bin" catalog="system" width="128" height="93"/>
+        <namedColor name="label">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
         <namedColor name="outgoingMessageBackground">
             <color red="0.20399998128414154" green="0.77999997138977051" blue="0.34899997711181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
