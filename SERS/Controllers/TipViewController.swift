@@ -9,16 +9,44 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class TipViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+class TipViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var incidentTimeAndDate: UIDatePicker!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var incidentDesc: UITextField!
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        self.firstName.delegate = self
+        self.lastName.delegate = self
+        self.incidentDesc.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.switchBasedNextTextField(textField)
+        return true
+    }
+    
+    private func switchBasedNextTextField(_ textField: UITextField) {
+        switch textField {
+        case self.firstName:
+            self.lastName.becomeFirstResponder()
+        case self.lastName:
+            self.incidentDesc.becomeFirstResponder()
+        default:
+            self.incidentDesc.resignFirstResponder()
+        }
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+
+    
     
     @IBAction func tipSubmitButtonPressed(_ sender: UIButton) {
         print("Submit button pressed!")

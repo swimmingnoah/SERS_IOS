@@ -6,16 +6,25 @@
 //
 import UIKit
 import Firebase
-class NewProfileViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+class NewProfileViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var fnameField: UITextField!
     @IBOutlet weak var lnameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneNumField: UITextField!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.fnameField.delegate = self
+        self.lnameField.delegate = self
+        self.emailField.delegate = self
+        self.phoneNumField.delegate = self
+    }
     
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
     
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
