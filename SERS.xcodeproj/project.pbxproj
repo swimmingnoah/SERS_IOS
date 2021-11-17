@@ -262,7 +262,6 @@
 				B6A4A18827052AB80011DD8F /* ProfileViewController.swift */,
 				B63C0EE62715168100922264 /* SlideToConfirmViewController.swift */,
 				B63C0EE827151BC100922264 /* ConfirmViewController.swift */,
-				8007311C273DD7FD0041A516 /* TipViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -463,7 +462,6 @@
 			files = (
 				B6A4A17F27052A4C0011DD8F /* LoginViewController.swift in Sources */,
 				B63C0EE72715168100922264 /* SlideToConfirmViewController.swift in Sources */,
-				8007311D273DD7FD0041A516 /* TipViewController.swift in Sources */,
 				B6A4A18F27066C450011DD8F /* DatabaseManager.swift in Sources */,
 				B63C0EE927151BC100922264 /* ConfirmViewController.swift in Sources */,
 				B6A4A179270529170011DD8F /* Extentions.swift in Sources */,
@@ -481,7 +479,6 @@
 				B6A4A146270528990011DD8F /* SceneDelegate.swift in Sources */,
 				B6B1CD67270AA92D00D6CF8E /* StorageManager.swift in Sources */,
 				B6A67EEF272A42A100EBD37E /* HelpViewController.swift in Sources */,
-				8007311B273D9DEE0041A516 /* NewProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
