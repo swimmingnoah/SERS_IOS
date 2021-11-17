@@ -34,6 +34,10 @@
 		B6A4A18F27066C450011DD8F /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4A18E27066C450011DD8F /* DatabaseManager.swift */; };
 		B6A67EED272A3B6300EBD37E /* HelpInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A67EEC272A3B6300EBD37E /* HelpInfoViewController.swift */; };
 		B6A67EEF272A42A100EBD37E /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A67EEE272A42A100EBD37E /* HelpViewController.swift */; };
+		B6A7EF102744C485008921AC /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A7EF0F2744C485008921AC /* NewChatViewController.swift */; };
+		B6A7EF142744C4E0008921AC /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A7EF132744C4E0008921AC /* ChatUser.swift */; };
+		B6A7EF162744C56F008921AC /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A7EF152744C56F008921AC /* Chat.swift */; };
+		B6A7EF182744C5E5008921AC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A7EF172744C5E5008921AC /* Message.swift */; };
 		B6B1CD652709260100D6CF8E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1CD642709260100D6CF8E /* ChatViewController.swift */; };
 		B6B1CD67270AA92D00D6CF8E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1CD66270AA92D00D6CF8E /* StorageManager.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +92,10 @@
 		B6A4A18E27066C450011DD8F /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		B6A67EEC272A3B6300EBD37E /* HelpInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpInfoViewController.swift; sourceTree = "<group>"; };
 		B6A67EEE272A42A100EBD37E /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = SERS/Controllers/HelpControllers/HelpViewController.swift; sourceTree = SOURCE_ROOT; };
+		B6A7EF0F2744C485008921AC /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
+		B6A7EF132744C4E0008921AC /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
+		B6A7EF152744C56F008921AC /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		B6A7EF172744C5E5008921AC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		B6B1CD642709260100D6CF8E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B6B1CD66270AA92D00D6CF8E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		B6F15880270CA32A00DEE09B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -153,6 +161,10 @@
 				B6441A692729F0340015ECAF /* MUPDViewController.swift */,
 				B6B1CD642709260100D6CF8E /* ChatViewController.swift */,
 				B6A4A17B27052A2D0011DD8F /* ConversationsViewController.swift */,
+				B6A7EF0F2744C485008921AC /* NewChatViewController.swift */,
+				B6A7EF132744C4E0008921AC /* ChatUser.swift */,
+				B6A7EF152744C56F008921AC /* Chat.swift */,
+				B6A7EF172744C5E5008921AC /* Message.swift */,
 			);
 			path = Conversation;
 			sourceTree = "<group>";
@@ -473,10 +485,14 @@
 				B63C0EE927151BC100922264 /* ConfirmViewController.swift in Sources */,
 				B6A4A179270529170011DD8F /* Extentions.swift in Sources */,
 				B6441A6A2729F0340015ECAF /* MUPDViewController.swift in Sources */,
+				B6A7EF182744C5E5008921AC /* Message.swift in Sources */,
 				B6A4A18927052AB80011DD8F /* ProfileViewController.swift in Sources */,
 				B6A4A18127052A5C0011DD8F /* RegisterViewController.swift in Sources */,
 				B6A4A17C27052A2D0011DD8F /* ConversationsViewController.swift in Sources */,
+				B6A7EF142744C4E0008921AC /* ChatUser.swift in Sources */,
 				B619E2892744C35100A79F10 /* TipViewController.swift in Sources */,
+				B6A7EF102744C485008921AC /* NewChatViewController.swift in Sources */,
+				B6A7EF162744C56F008921AC /* Chat.swift in Sources */,
 				B6A4A18727052AAC0011DD8F /* NewConversationViewController.swift in Sources */,
 				B6A67EED272A3B6300EBD37E /* HelpInfoViewController.swift in Sources */,
 				B6A4A144270528990011DD8F /* AppDelegate.swift in Sources */,
