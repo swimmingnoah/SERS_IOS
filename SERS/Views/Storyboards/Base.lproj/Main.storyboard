@@ -26,7 +26,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Click to start a Conversation"/>
                                 <connections>
-                                    <action selector="mupdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0R-Ko-cYY"/>
+                                    <action selector="mupdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nEe-DS-ipa"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khR-ax-kXt">

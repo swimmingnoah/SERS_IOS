@@ -12,24 +12,24 @@ import FirebaseAuth
 class ProfileViewController: UIViewController {
 	
 //	@IBOutlet var tableView: UITableView!
-	
-	let data = ["Log Out"]
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		tableView.register(UITableViewCell.self,
-						   forCellReuseIdentifier: "cell")
-		tableView.delegate = self
-		tableView.dataSource = self
-		tableView.tableHeaderView = createTabelHeader()
-        
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "Backdrop")?.draw(in: self.view.bounds)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: image)
-        
-	}
+//
+//	let data = ["Log Out"]
+//
+//	override func viewDidLoad() {
+//		super.viewDidLoad()
+//		tableView.register(UITableViewCell.self,
+//						   forCellReuseIdentifier: "cell")
+//		tableView.delegate = self
+//		tableView.dataSource = self
+//		tableView.tableHeaderView = createTabelHeader()
+//
+//        UIGraphicsBeginImageContext(self.view.frame.size)
+//        UIImage(named: "Backdrop")?.draw(in: self.view.bounds)
+//        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+//        UIGraphicsEndImageContext()
+//        self.view.backgroundColor = UIColor(patternImage: image)
+//
+//	}
 //	func createTabelHeader() -> UIView? {
 //		guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
 //			return nil

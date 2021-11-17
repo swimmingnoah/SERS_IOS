@@ -12,6 +12,8 @@
 		64B8E2D02739D53700AEAFA6 /* MapLegendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8E2CF2739D53700AEAFA6 /* MapLegendViewController.swift */; };
 		B60033B1272F38F60036DF63 /* MapTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60033B0272F38F60036DF63 /* MapTestViewController.swift */; };
 		B60033B3272F3C7B0036DF63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B60033B2272F3C7B0036DF63 /* GoogleService-Info.plist */; };
+		B619E2872744C27D00A79F10 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B619E2862744C27D00A79F10 /* NewProfileViewController.swift */; };
+		B619E2892744C35100A79F10 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B619E2882744C35100A79F10 /* TipViewController.swift */; };
 		B63C0EE72715168100922264 /* SlideToConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C0EE62715168100922264 /* SlideToConfirmViewController.swift */; };
 		B63C0EE927151BC100922264 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C0EE827151BC100922264 /* ConfirmViewController.swift */; };
 		B6441A6A2729F0340015ECAF /* MUPDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6441A692729F0340015ECAF /* MUPDViewController.swift */; };
@@ -60,6 +62,8 @@
 		AFCAB4A265E1CBF3A206C878 /* Pods-SERS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SERS.debug.xcconfig"; path = "Target Support Files/Pods-SERS/Pods-SERS.debug.xcconfig"; sourceTree = "<group>"; };
 		B60033B0272F38F60036DF63 /* MapTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTestViewController.swift; sourceTree = "<group>"; };
 		B60033B2272F3C7B0036DF63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B619E2862744C27D00A79F10 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
+		B619E2882744C35100A79F10 /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		B63C0EE62715168100922264 /* SlideToConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideToConfirmViewController.swift; sourceTree = "<group>"; };
 		B63C0EE827151BC100922264 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		B6441A692729F0340015ECAF /* MUPDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUPDViewController.swift; sourceTree = "<group>"; };
@@ -262,7 +266,8 @@
 				B6A4A18827052AB80011DD8F /* ProfileViewController.swift */,
 				B63C0EE62715168100922264 /* SlideToConfirmViewController.swift */,
 				B63C0EE827151BC100922264 /* ConfirmViewController.swift */,
-				8007311C273DD7FD0041A516 /* TipViewController.swift */,
+				B619E2882744C35100A79F10 /* TipViewController.swift */,
+				B619E2862744C27D00A79F10 /* NewProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -463,14 +468,15 @@
 			files = (
 				B6A4A17F27052A4C0011DD8F /* LoginViewController.swift in Sources */,
 				B63C0EE72715168100922264 /* SlideToConfirmViewController.swift in Sources */,
-				8007311D273DD7FD0041A516 /* TipViewController.swift in Sources */,
 				B6A4A18F27066C450011DD8F /* DatabaseManager.swift in Sources */,
+				B619E2872744C27D00A79F10 /* NewProfileViewController.swift in Sources */,
 				B63C0EE927151BC100922264 /* ConfirmViewController.swift in Sources */,
 				B6A4A179270529170011DD8F /* Extentions.swift in Sources */,
 				B6441A6A2729F0340015ECAF /* MUPDViewController.swift in Sources */,
 				B6A4A18927052AB80011DD8F /* ProfileViewController.swift in Sources */,
 				B6A4A18127052A5C0011DD8F /* RegisterViewController.swift in Sources */,
 				B6A4A17C27052A2D0011DD8F /* ConversationsViewController.swift in Sources */,
+				B619E2892744C35100A79F10 /* TipViewController.swift in Sources */,
 				B6A4A18727052AAC0011DD8F /* NewConversationViewController.swift in Sources */,
 				B6A67EED272A3B6300EBD37E /* HelpInfoViewController.swift in Sources */,
 				B6A4A144270528990011DD8F /* AppDelegate.swift in Sources */,
@@ -481,7 +487,6 @@
 				B6A4A146270528990011DD8F /* SceneDelegate.swift in Sources */,
 				B6B1CD67270AA92D00D6CF8E /* StorageManager.swift in Sources */,
 				B6A67EEF272A42A100EBD37E /* HelpViewController.swift in Sources */,
-				8007311B273D9DEE0041A516 /* NewProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
