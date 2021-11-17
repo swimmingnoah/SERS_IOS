@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class TipViewController: UIViewController {
 
@@ -37,9 +38,22 @@ class TipViewController: UIViewController {
         
 //        SET FIELDS TO EMPTY AFTER SUBMISSION
         
-        firstName.text = ""
-        lastName.text = ""
-        incidentDesc.text = ""
+
+        
+        
+        let db = Firestore.firestore().collection("Tips")
+        db.addDocument(data: tipData) { (error) in
+            if let error = error {
+                print("Unable to create chat! \(error)")
+                return
+            } else {
+                print("Item sent")
+                self.firstName.text = ""
+                self.lastName.text = ""
+                self.incidentDesc.text = ""
+            }
+        }
+   
     }
     
 
