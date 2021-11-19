@@ -15,8 +15,9 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var incidentDesc: UITextField!
-
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +25,8 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         self.firstName.delegate = self
         self.lastName.delegate = self
         self.incidentDesc.delegate = self
+
+
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -45,7 +48,12 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-
+    func saveFName() {
+        UserDefaults.standard.set(self.firstName, forKey: "fName")
+        let name = UserDefaults.standard.string(forKey: "fName") as String?
+        print(name)
+    }
+    
     
     
     @IBAction func tipSubmitButtonPressed(_ sender: UIButton) {
@@ -54,35 +62,42 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         let timeFormat = DateFormatter()
         timeFormat.timeStyle = DateFormatter.Style.long
         timeFormat.dateStyle = DateFormatter.Style.long
+        let coordinate = "38.947726, -92.326521"
         
         let tipData = [
             "fname": firstName.text!,
             "lname": lastName.text!,
             "timeAndDate": timeFormat.string(from: incidentTimeAndDate.date),
-            "description": incidentDesc.text!
+            "description": incidentDesc.text!,
+            "coordinates": coordinate
         ] as [String : Any]
         
-        print(tipData)
         
-//        SET FIELDS TO EMPTY AFTER SUBMISSION
+        UserDefaults.standard.set(self.firstName.text, forKey: "fName")
+        let name = UserDefaults.standard.string(forKey: "fName") as String?
+        print("User Default Name:\(name)")
+        //        SET FIELDS TO EMPTY AFTER SUBMISSION
         
-
+        
         
         
         let db = Firestore.firestore().collection("Tips")
         db.addDocument(data: tipData) { (error) in
             if let error = error {
-                print("Unable to create chat! \(error)")
+//                print("Unable to create chat! \(error)")
                 return
             } else {
-                print("Item sent")
+//                print("Item sent")
                 self.firstName.text = ""
                 self.lastName.text = ""
                 self.incidentDesc.text = ""
+//                UserDefaults.standard.set(self.firstName, forKey: "fName")
+//                let name = UserDefaults.standard.string(forKey: "fName") as String?
+//                print("User Default Name:\(name)")
             }
         }
-   
+        
     }
     
-
+    
 }
