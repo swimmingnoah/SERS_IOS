@@ -5,13 +5,11 @@
 //  Created by Kyle Rohlfing on 11/11/21.
 //
 import UIKit
-import Firebase
 class NewProfileViewController: UIViewController, UITextFieldDelegate {
     
     
     
     @IBOutlet weak var phoneNumLabel: UILabel!
-
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var lNameLabel: UILabel!
     @IBOutlet weak var fNameLabel: UILabel!
@@ -19,6 +17,9 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lnameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneNumField: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,100 +27,127 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
         self.lnameField.delegate = self
         self.emailField.delegate = self
         self.phoneNumField.delegate = self
+        hideLabels()
+        loadFields()
         
+    }
+    
+    func hideFields() {
+        fnameField.isHidden = true
+        lnameField.isHidden = true
+        emailField.isHidden = true
+        phoneNumField.isHidden = true
+    }
+    func showFields() {
+        fnameField.isHidden = false
+        lnameField.isHidden = false
+        emailField.isHidden = false
+        phoneNumField.isHidden = false
+    }
+    func hideLabels() {
         fNameLabel.isHidden = true
         lNameLabel.isHidden = true
         emailLabel.isHidden = true
-        phoneNumLabel.isHidden = true    }
+        phoneNumLabel.isHidden = true
+    }
+    func showLabels() {
+        fNameLabel.isHidden = false
+        lNameLabel.isHidden = false
+        emailLabel.isHidden = false
+        phoneNumLabel.isHidden = false
+    }
     
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.switchBasedNextTextField(textField)
         return true
     }
     
+    private func switchBasedNextTextField(_ textField: UITextField) {
+        switch textField {
+        case self.fnameField:
+            self.lnameField.becomeFirstResponder()
+        case self.lnameField:
+            self.emailField.becomeFirstResponder()
+        case self.emailField:
+            self.phoneNumField.becomeFirstResponder()
+        default:
+            self.phoneNumField.resignFirstResponder()
+        }
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    
+    
+    func loadFields() {
+        if UDM.shared.defaults.value(forKey: "firstName") != nil {
+            if let value = UDM.shared.defaults.value(forKey: "firstName") as? String {
+                fNameLabel.isHidden = false
+                fNameLabel.text = value
+                fnameField.isHidden = true
+ 
+            }
+        }
+        if UDM.shared.defaults.value(forKey: "lastName") != nil {
+            if let value = UDM.shared.defaults.value(forKey: "lastName") as? String {
+                lNameLabel.isHidden = false
+                lNameLabel.text = value
+                lnameField.isHidden = true
+
+            }
+        }
+        if UDM.shared.defaults.value(forKey: "emailAddr") != nil {
+            if let value = UDM.shared.defaults.value(forKey: "emailAddr") as? String {
+                emailLabel.isHidden = false
+                emailLabel.text = value
+                emailField.isHidden = true
+
+            }
+        }
+        if UDM.shared.defaults.value(forKey: "phoneNumber") != nil {
+            if let value = UDM.shared.defaults.value(forKey: "phoneNumber") as? String {
+                phoneNumLabel.isHidden = false
+                phoneNumLabel.text = value
+                phoneNumField.isHidden = true
+
+            }
+        }
+    }
+    
+    @IBAction func resetDefaults(_ sender: UIButton) {
+//        print("button tapped")
+        UDM.shared.defaults.removeObject(forKey: "firstName")
+        UDM.shared.defaults.removeObject(forKey: "lastName")
+        UDM.shared.defaults.removeObject(forKey: "emailAddr")
+        UDM.shared.defaults.removeObject(forKey: "phoneNumber")
+        hideLabels()
+        showFields()
+    }
+    
+
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
-        print("Submit button pressed!")
+//        print("Submit button pressed!")
         
 //        var ref: DatabaseReference!
 //        ref = Database.database().reference()
 //        let userID = Auth.auth().currentUser?.uid
         
-        fnameField.isHidden = true
-        lnameField.isHidden = true
-        emailField.isHidden = true
-        phoneNumField.isHidden = true
-        
-        UDM.shared.defaults.set(fnameField.text, forKey: "fName")
-        UDM.shared.defaults.set(lnameField.text, forKey: "lName")
-        UDM.shared.defaults.set(emailField.text, forKey: "email")
-        UDM.shared.defaults.set(phoneNumField.text, forKey: "phoneNum")
-        if UDM.shared.defaults.value(forKey: "fName") != nil {
-            if let value = UDM.shared.defaults.value(forKey: "fName") as? String {
-                fNameLabel.isHidden = false
-                fNameLabel.text = value
-            }
-        }
-        if UDM.shared.defaults.value(forKey: "lName") != nil {
-            if let value = UDM.shared.defaults.value(forKey: "lName") as? String {
-                lNameLabel.isHidden = false
-                lNameLabel.text = value
-            }
-        }
-        if UDM.shared.defaults.value(forKey: "email") != nil {
-            if let value = UDM.shared.defaults.value(forKey: "email") as? String {
-                emailLabel.isHidden = false
-                emailLabel.text = value
-            }
-        }
-        if UDM.shared.defaults.value(forKey: "phoneNum") != nil {
-            if let value = UDM.shared.defaults.value(forKey: "phoneNum") as? String {
-                phoneNumLabel.isHidden = false
-                phoneNumLabel.text = value
-            }
-        }
-        
 
-//        if let value = UDM.shared.defaults.value(forKey: "lName") as? String {
-//            print(value)
-//        }
-//        if let value = UDM.shared.defaults.value(forKey: "email") as? String {
-//            print(value)
-//        }
-//        if let value = UDM.shared.defaults.value(forKey: "phoneNum") as? String {
-//            print(value)
-//        }
-//        print(userDefaults.value(forKey: "fName"))
-//
-//        let fname = fnameField.text!
-//        let lname = lnameField.text!
-//        let email = emailField.text!
-//        let phoneNum = phoneNumField.text!
-//        let fname = fnameField.text!
-//        let lname = lnameField.text!
-//        let email = emailField.text!
-//        let phoneNum = phoneNumField.text!
         
-//        print(fname, lname, email, phoneNum)
-        let userData = [
-            "fname": fnameField.text!,
-            "lname": lnameField.text!,
-            "email": emailField.text!,
-            "phoneNum": phoneNumField.text!
-        ]
-
-//        print(userData)
+        UDM.shared.defaults.set(fnameField.text, forKey: "firstName")
+        UDM.shared.defaults.set(lnameField.text, forKey: "lastName")
+        UDM.shared.defaults.set(emailField.text, forKey: "emailAddr")
+        UDM.shared.defaults.set(phoneNumField.text, forKey: "phoneNumber")
+        
+        loadFields()
+        
 
     }
 }
 
 
-class UDM {
-    static let shared = UDM()
-    
-    let defaults = UserDefaults()
-    
-//    suiteName: "com.noahnemec.SERS"
-    
-    
-}
+

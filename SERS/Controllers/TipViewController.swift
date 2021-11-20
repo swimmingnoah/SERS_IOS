@@ -25,6 +25,9 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         self.firstName.delegate = self
         self.lastName.delegate = self
         self.incidentDesc.delegate = self
+        
+        
+        findFields()
 
 
     }
@@ -48,10 +51,25 @@ class TipViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    func saveFName() {
-        UserDefaults.standard.set(self.firstName, forKey: "fName")
-        let name = UserDefaults.standard.string(forKey: "fName") as String?
-        print(name)
+    
+    
+    
+    
+    
+    func findFields() {
+        if UDM.shared.defaults.value(forKey: "firstName") != nil {
+            if let value = UDM.shared.defaults.value(forKey: "firstName") as? String {
+//                firstName.isHidden = false
+                firstName.text = value
+            }
+        }
+        
+        if UDM.shared.defaults.value(forKey: "lastName") != nil {
+            if let value = UDM.shared.defaults.value(forKey: "lastName") as? String {
+//                firstName.isHidden = false
+                lastName.text = value
+            }
+        }
     }
     
     
@@ -88,8 +106,6 @@ class TipViewController: UIViewController, UITextFieldDelegate {
                 return
             } else {
 //                print("Item sent")
-                self.firstName.text = ""
-                self.lastName.text = ""
                 self.incidentDesc.text = ""
 //                UserDefaults.standard.set(self.firstName, forKey: "fName")
 //                let name = UserDefaults.standard.string(forKey: "fName") as String?
