@@ -62,3 +62,12 @@ final class StorageManager {
 	}
 }
 
+class UDM {
+    static let shared = UDM()
+    
+    let defaults = UserDefaults(suiteName: "com.noahnemec.info")!
+    
+//    suiteName: "com.noahnemec.SERS"
+    
+    
+}
