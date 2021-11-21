@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3iE-dx-Lcg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3iE-dx-Lcg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -605,44 +605,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tower" translatesAutoresizingMaskIntoConstraints="NO" id="ywq-Hc-mtn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tower" translatesAutoresizingMaskIntoConstraints="NO" id="ywq-Hc-mtn">
                                 <rect key="frame" x="0.0" y="153" width="139" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="FHY-73-baL"/>
+                                    <constraint firstAttribute="height" constant="120" id="hLc-kb-pkD"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The icon to the left represents the emergency towers. These towers are scattetered throughtout campus. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIU-J9-zgR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The icon to the left represents the emergency towers. These towers are scattetered throughtout campus. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIU-J9-zgR">
                                 <rect key="frame" x="147" y="113" width="247" height="199"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="199" id="5sl-HR-QDd"/>
+                                    <constraint firstAttribute="width" constant="247" id="R23-p9-4v6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemGray4Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PoliceSiren" translatesAutoresizingMaskIntoConstraints="NO" id="bx5-o2-M0o">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoliceSiren" translatesAutoresizingMaskIntoConstraints="NO" id="bx5-o2-M0o">
                                 <rect key="frame" x="0.0" y="574" width="139" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="archivebox.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fua-eG-AyG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="archivebox.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fua-eG-AyG">
                                 <rect key="frame" x="0.0" y="353.5" width="139" height="138"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="label"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="WJk-zl-9Je"/>
+                                    <constraint firstAttribute="height" constant="139" id="sbv-JU-BWf"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The icon to the left represents the emergency yellow boxes. They are found around parking structures or droms." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRF-uC-lHu">
-                                <rect key="frame" x="147" y="334" width="247" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The icon to the left represents the emergency yellow boxes. They are found around parking structures or droms." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRF-uC-lHu">
+                                <rect key="frame" x="147" y="334" width="255" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="2Au-n6-NvU"/>
+                                    <constraint firstAttribute="height" constant="158" id="ZOw-Ou-9Eb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemGray4Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The icon to the left represents the MUPD station founded at the bottom of Virginia Avune parking strucutre." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zA1-tX-7A8">
-                                <rect key="frame" x="147" y="550" width="255" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The icon to the left represents the MUPD station founded at the bottom of Virginia Avune parking strucutre." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zA1-tX-7A8">
+                                <rect key="frame" x="147" y="550" width="236" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="eGv-Yj-JHF"/>
+                                    <constraint firstAttribute="width" constant="236" id="uWn-Qn-oHz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemGray4Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7rJ-gb-XtS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bx5-o2-M0o" firstAttribute="leading" secondItem="7rJ-gb-XtS" secondAttribute="leading" id="2Z8-TG-f0h"/>
+                            <constraint firstItem="7rJ-gb-XtS" firstAttribute="trailing" secondItem="DIU-J9-zgR" secondAttribute="trailing" constant="20" id="4dL-4b-lct"/>
+                            <constraint firstItem="zA1-tX-7A8" firstAttribute="leading" secondItem="bx5-o2-M0o" secondAttribute="trailing" constant="8" symbolic="YES" id="4sV-KZ-ThY"/>
+                            <constraint firstItem="7rJ-gb-XtS" firstAttribute="trailing" secondItem="DIU-J9-zgR" secondAttribute="trailing" constant="20" id="6qT-d5-A6H"/>
+                            <constraint firstItem="7rJ-gb-XtS" firstAttribute="trailing" secondItem="KRF-uC-lHu" secondAttribute="trailing" constant="12" id="Jd7-5V-t8q"/>
+                            <constraint firstItem="Fua-eG-AyG" firstAttribute="leading" secondItem="7rJ-gb-XtS" secondAttribute="leading" id="Mr8-1c-E6U"/>
+                            <constraint firstItem="KRF-uC-lHu" firstAttribute="top" secondItem="DIU-J9-zgR" secondAttribute="bottom" constant="22" id="PhX-qU-3gI"/>
+                            <constraint firstItem="Fua-eG-AyG" firstAttribute="bottom" secondItem="KRF-uC-lHu" secondAttribute="bottom" id="QkM-rY-9ok"/>
+                            <constraint firstItem="KRF-uC-lHu" firstAttribute="leading" secondItem="Fua-eG-AyG" secondAttribute="trailing" constant="8" symbolic="YES" id="Wxr-k3-dSF"/>
+                            <constraint firstItem="bx5-o2-M0o" firstAttribute="top" secondItem="Fua-eG-AyG" secondAttribute="bottom" constant="82" id="YSU-Oc-LPx"/>
+                            <constraint firstItem="DIU-J9-zgR" firstAttribute="leading" secondItem="ywq-Hc-mtn" secondAttribute="trailing" constant="8" symbolic="YES" id="ZF7-Om-LWQ"/>
+                            <constraint firstItem="7rJ-gb-XtS" firstAttribute="trailing" secondItem="Fua-eG-AyG" secondAttribute="trailing" constant="275" id="aaq-OE-q9Q"/>
+                            <constraint firstItem="7rJ-gb-XtS" firstAttribute="bottom" secondItem="zA1-tX-7A8" secondAttribute="bottom" constant="61" id="cWo-ed-OXG"/>
+                            <constraint firstItem="ywq-Hc-mtn" firstAttribute="top" secondItem="7rJ-gb-XtS" secondAttribute="top" constant="13" id="ckl-wD-yhb"/>
+                            <constraint firstItem="bx5-o2-M0o" firstAttribute="bottom" secondItem="zA1-tX-7A8" secondAttribute="bottom" id="gJV-CD-1dv"/>
+                            <constraint firstItem="7rJ-gb-XtS" firstAttribute="trailing" secondItem="zA1-tX-7A8" secondAttribute="trailing" constant="31" id="mpT-VF-oyx"/>
+                            <constraint firstItem="ywq-Hc-mtn" firstAttribute="leading" secondItem="7rJ-gb-XtS" secondAttribute="leading" id="nAJ-Jo-5Qs"/>
+                            <constraint firstItem="DIU-J9-zgR" firstAttribute="leading" secondItem="ywq-Hc-mtn" secondAttribute="trailing" constant="8" symbolic="YES" id="qvk-rA-qsv"/>
+                            <constraint firstItem="DIU-J9-zgR" firstAttribute="top" secondItem="Dsw-8T-SYn" secondAttribute="top" constant="113" id="wDg-ra-tHK"/>
+                            <constraint firstItem="zA1-tX-7A8" firstAttribute="top" secondItem="KRF-uC-lHu" secondAttribute="bottom" constant="58" id="yGN-RZ-qo2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PyA-ZQ-HLw"/>
                 </viewController>
