@@ -11,19 +11,19 @@ class SuperViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+/*
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "Backdrop")?.draw(in: self.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor.white
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.tabBarController?.tabBar.tintColor = UIColor.darkGray
-        self.navigationController?.tabBarController?.tabBar.barTintColor = UIColor.white
-        //self.navigationController?.tabBarItem.badgeColor = UIColor.white
-        
+        */
+        //self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        //self.navigationController?.tabBarController?.tabBar.tintColor = UIColor(displayP3Red: 188, green: 56, blue: 31, alpha: 1)
+        self.navigationController?.tabBarController?.tabBar.tintColor = UIColor.white
+        self.navigationController?.tabBarController?.tabBar.barTintColor = UIColor.systemGray4
+        //self.navigationController?.tabBarItem.badgeColor = UIColor.red
         // Do any additional setup after loading the view.
     }
     
