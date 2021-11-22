@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class TipViewController: UIViewController {
+class TipViewController: SuperViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

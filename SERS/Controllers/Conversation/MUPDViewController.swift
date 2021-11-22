@@ -7,15 +7,15 @@
 
 import UIKit
 
-class MUPDViewController: UIViewController {
+class MUPDViewController: SuperViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIGraphicsBeginImageContext(self.view.frame.size)
+        /*UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "Backdrop")?.draw(in: self.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: image)
+        self.view.backgroundColor = UIColor(patternImage: image)*/
         // Do any additional setup after loading the view.
     }
     
