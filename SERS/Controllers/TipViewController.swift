@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class TipViewController: UIViewController, UITextFieldDelegate {
+class TipViewController: SuperViewController, UITextFieldDelegate {
     
     @IBOutlet weak var incidentTimeAndDate: UIDatePicker!
     @IBOutlet weak var firstName: UITextField!
