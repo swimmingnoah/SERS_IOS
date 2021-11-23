@@ -24,7 +24,9 @@
                                     <constraint firstAttribute="width" constant="250" id="gpq-Zv-ZPH"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Click to start a Conversation"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Click to start a Conversation">
+                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="mupdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nEe-DS-ipa"/>
                                 </connections>
@@ -33,12 +35,12 @@
                                 <rect key="frame" x="20" y="240" width="374" height="403"/>
                                 <string key="text">By starting a conversation you're agreeing to share your location, and are wanting to contact the police. This is the equivalent of dialing 911. Any misuse of this chat session will be investigated.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="khR-ax-kXt" secondAttribute="leading" constant="-20" id="Ain-m2-s85"/>
                             <constraint firstItem="khR-ax-kXt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JCb-uV-i7A"/>
@@ -91,6 +93,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="UA1-gD-Pi3" eventType="touchUpInside" id="VaR-6G-Ujf"/>
@@ -207,7 +210,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cRk-Vm-wlv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kcb-Vb-TTX" firstAttribute="trailing" secondItem="1Ic-SG-Ujh" secondAttribute="trailing" id="0N4-yN-Yt3"/>
                             <constraint firstItem="cRk-Vm-wlv" firstAttribute="trailing" secondItem="VCz-tx-2mY" secondAttribute="trailing" constant="40" id="0uz-fO-j8j"/>
@@ -334,7 +337,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PrB-Yf-dce"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GX7-Pc-UIE" firstAttribute="top" secondItem="PrB-Yf-dce" secondAttribute="top" id="SW8-mT-WAa"/>
                             <constraint firstItem="PrB-Yf-dce" firstAttribute="bottom" secondItem="GX7-Pc-UIE" secondAttribute="bottom" id="Sq8-jK-G2A"/>
@@ -443,7 +446,9 @@
                                     <constraint firstAttribute="width" constant="250" id="mWw-G2-Sj0"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="square.and.pencil" catalog="system" title="New Tip" imagePadding="7"/>
+                                <buttonConfiguration key="configuration" style="filled" image="square.and.pencil" catalog="system" title="New Tip" imagePadding="7">
+                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="o52-KI-67F" kind="show" id="WQ0-6Z-Hqp"/>
                                 </connections>
@@ -456,12 +461,12 @@
                                 </constraints>
                                 <string key="text">By submitting a new tip, you are agreeing to share your location and contact information with the police. This should be treated with the importance of calling 911. Any misuse of this tip line will be investigated.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5XT-q0-Jac"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5XT-q0-Jac" firstAttribute="bottom" secondItem="uR1-FQ-Nvb" secondAttribute="bottom" constant="170" id="5yf-cF-b8s"/>
                             <constraint firstItem="uR1-FQ-Nvb" firstAttribute="top" secondItem="5XT-q0-Jac" secondAttribute="top" constant="100" id="8PY-qs-mPJ"/>
@@ -487,6 +492,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareplay" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ima-rh-ydP">
                                 <rect key="frame" x="0.0" y="119" width="414" height="142.5"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Of Incident:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeT-2c-gJG">
                                 <rect key="frame" x="47" y="271" width="320" height="20.5"/>
@@ -521,7 +527,9 @@
                                     <constraint firstAttribute="width" constant="320" id="3bc-EF-W64"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit">
+                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="tipSubmitButtonPressed:" destination="o52-KI-67F" eventType="touchUpInside" id="m4k-zq-laN"/>
                                 </connections>
@@ -567,7 +575,7 @@
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AVC-4L-H6W"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Xqk-bu-qpX" firstAttribute="centerX" secondItem="AVC-4L-H6W" secondAttribute="centerX" id="38F-Qa-WEj"/>
                             <constraint firstItem="AVC-4L-H6W" firstAttribute="trailing" secondItem="Ima-rh-ydP" secondAttribute="trailing" id="54J-ob-jYg"/>
@@ -638,7 +646,7 @@
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="exe-yc-VJp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="exe-yc-VJp" firstAttribute="bottom" secondItem="nXM-MU-tDo" secondAttribute="bottom" id="TE8-4x-eyg"/>
                             <constraint firstItem="exe-yc-VJp" firstAttribute="trailing" secondItem="nXM-MU-tDo" secondAttribute="trailing" id="aI4-jK-VW8"/>
@@ -683,12 +691,12 @@
                                 <rect key="frame" x="30" y="170" width="354" height="393"/>
                                 <string key="text">The profile page is meant to store your name, phone number, and email. This information will be automatically filled in while reporting a tip or contacting emergency responders. This is to help emergency responders react quickly to emergency situations.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fji-X1-VB3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xdi-C1-g1d" firstAttribute="leading" secondItem="Fji-X1-VB3" secondAttribute="leading" constant="30" id="2SB-9Z-utL"/>
                             <constraint firstItem="Fji-X1-VB3" firstAttribute="trailing" secondItem="xdi-C1-g1d" secondAttribute="trailing" constant="30" id="3J5-vU-WX3"/>
@@ -721,7 +729,7 @@
                                 <rect key="frame" x="147" y="113" width="247" height="199"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" systemColor="systemGray4Color"/>
+                                <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PoliceSiren" translatesAutoresizingMaskIntoConstraints="NO" id="bx5-o2-M0o">
@@ -738,19 +746,19 @@
                                 <rect key="frame" x="147" y="334" width="247" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" systemColor="systemGray4Color"/>
+                                <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The icon to the left represents the MUPD station founded at the bottom of Virginia Avune parking strucutre." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zA1-tX-7A8">
                                 <rect key="frame" x="147" y="550" width="255" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" systemColor="systemGray4Color"/>
+                                <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7rJ-gb-XtS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27450980392156865" green="0.50980392156862742" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="PyA-ZQ-HLw"/>
                 </viewController>
@@ -774,6 +782,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="6Lb-Hg-ER9" eventType="touchUpInside" id="gBP-Bd-afo"/>
@@ -890,7 +899,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IMd-SA-MxB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6St-eL-6Nz" firstAttribute="top" secondItem="cot-4a-8oh" secondAttribute="bottom" constant="8" symbolic="YES" id="0qG-hU-S7v"/>
                             <constraint firstItem="K0S-H2-Hrk" firstAttribute="top" secondItem="8SW-Sj-HUz" secondAttribute="bottom" constant="8" symbolic="YES" id="0wf-d8-50B"/>
@@ -982,9 +991,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

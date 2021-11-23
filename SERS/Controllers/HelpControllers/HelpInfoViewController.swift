@@ -9,7 +9,7 @@
 
 import UIKit
 
-class HelpInfoViewController: UIViewController {
+class HelpInfoViewController: SuperViewController {
 
     @IBOutlet weak var infoLabel: UILabel!
     
@@ -20,7 +20,7 @@ class HelpInfoViewController: UIViewController {
         super.viewDidLoad()
         infoLabel.text = info
 
-        view.backgroundColor = UIColor(red: 189/250, green: 168/250, blue: 145/250, alpha: 1)
+        //view.backgroundColor = UIColor(red: 189/250, green: 168/250, blue: 145/250, alpha: 1)
         // Do any additional setup after loading the view.
     }
     

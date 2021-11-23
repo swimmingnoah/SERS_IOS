@@ -5,7 +5,7 @@
 //  Created by Kyle Rohlfing on 11/11/21.
 //
 import UIKit
-class NewProfileViewController: UIViewController, UITextFieldDelegate {
+class NewProfileViewController: SuperViewController, UITextFieldDelegate {
     
     
     
