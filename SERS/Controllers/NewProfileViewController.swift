@@ -127,21 +127,26 @@ class NewProfileViewController: UIViewController, UITextFieldDelegate {
         showFields()
     }
     
+    
+    
 
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
 //        print("Submit button pressed!")
+        let identifier = UUID()
+        print("this is the id: \(identifier)")
         
 //        var ref: DatabaseReference!
 //        ref = Database.database().reference()
 //        let userID = Auth.auth().currentUser?.uid
-        
 
-        
         UDM.shared.defaults.set(fnameField.text, forKey: "firstName")
         UDM.shared.defaults.set(lnameField.text, forKey: "lastName")
         UDM.shared.defaults.set(emailField.text, forKey: "emailAddr")
         UDM.shared.defaults.set(phoneNumField.text, forKey: "phoneNumber")
+        UDM.shared.defaults.set(identifier.uuidString, forKey: "id")
+        print(UDM.shared.defaults.value(forKey: "id"))
+        
         
         loadFields()
         

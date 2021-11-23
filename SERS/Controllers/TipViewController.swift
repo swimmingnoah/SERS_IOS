@@ -77,15 +77,16 @@ class TipViewController: UIViewController, UITextFieldDelegate {
     @IBAction func tipSubmitButtonPressed(_ sender: UIButton) {
         print("Submit button pressed!")
         
-        let timeFormat = DateFormatter()
-        timeFormat.timeStyle = DateFormatter.Style.long
-        timeFormat.dateStyle = DateFormatter.Style.long
+//        let timeFormat = DateFormatter()
+//        timeFormat.timeStyle = DateFormatter.Style.long
+//        timeFormat.dateStyle = DateFormatter.Style.long
+        let timeInterval = NSDate().timeIntervalSince1970
         let coordinate = "38.947726, -92.326521"
         
         let tipData = [
             "fname": firstName.text!,
             "lname": lastName.text!,
-            "timeAndDate": timeFormat.string(from: incidentTimeAndDate.date),
+            "timeAndDate": timeInterval,
             "description": incidentDesc.text!,
             "coordinates": coordinate
         ] as [String : Any]
