@@ -194,7 +194,7 @@ class MapTestViewController: SuperViewController,MKMapViewDelegate, CLLocationMa
         }
         
         let boxImage = UIImage(systemName: "archivebox.circle")
-        let policeSirenImage = UIImage(named: "PoliceSiren")
+        let policeSirenImage = UIImage(named: "Siren")
         let towerImage = UIImage(named: "Tower")
         if let subtitle = annotation.subtitle{
             //            print("subtitle = \(subtitle)")
