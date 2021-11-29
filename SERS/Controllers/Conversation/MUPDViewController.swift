@@ -21,13 +21,27 @@ class MUPDViewController: UIViewController {
     
     @IBAction func mupdButton(_ sender: Any) {
 //        self.performSegue(withIdentifier: "profileSegue", sender: sender)
+//        print(UDM.shared.defaults.value(forKey: "fName"))
         
-        if (UDM.shared.defaults.value(forKey: "fName") != nil), (UDM.shared.defaults.value(forKey: "lname") != nil), (UDM.shared.defaults.value(forKey: "email") != nil), (UDM.shared.defaults.value(forKey: "phoneNum") != nil) {
-            self.performSegue(withIdentifier: "profileSegue", sender: sender)
+//        if (UDM.shared.defaults.value(forKey: "fName") != nil), (UDM.shared.defaults.value(forKey: "lname") != nil), (UDM.shared.defaults.value(forKey: "email") != nil), (UDM.shared.defaults.value(forKey: "phoneNum") != nil) {
+//
+//            self.performSegue(withIdentifier: "ChatSegue", sender: sender)
+//        }
+//        else {
+//            self.performSegue(withIdentifier: "profileSegue", sender: sender)
+//        }
+        if UDM.shared.defaults.value(forKey: "firstName") != nil {
+          //Key exists
+            self.performSegue(withIdentifier: "ChatSegue", sender: sender)
+            print("key Exists")
         }
         else {
-            self.performSegue(withIdentifier: "ChatSegue", sender: sender)
+            self.performSegue(withIdentifier: "profileSegue", sender: sender)
+            print("key does not exist")
         }
+
+        
+//        print(self.isKeyPresentInUserDefaults(key: "firstName"))
         
         
 //        self.performSegue(withIdentifier: "ChatSegue", sender: sender)
@@ -35,5 +49,6 @@ class MUPDViewController: UIViewController {
     //    @IBAction func redButtonClicked(sender: AnyObject) {
 //        self.performSegueWithIdentifier("redView", sender: sender)
 //    }
+
     
 }
