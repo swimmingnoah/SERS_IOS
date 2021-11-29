@@ -208,6 +208,12 @@
                                     <action selector="resetDefaults:" destination="UA1-gD-Pi3" eventType="touchUpInside" id="oqe-hw-jqD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rln-f9-KS7">
+                                <rect key="frame" x="186" y="130" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cRk-Vm-wlv"/>
                         <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,6 +221,7 @@
                             <constraint firstItem="kcb-Vb-TTX" firstAttribute="trailing" secondItem="1Ic-SG-Ujh" secondAttribute="trailing" id="0N4-yN-Yt3"/>
                             <constraint firstItem="cRk-Vm-wlv" firstAttribute="trailing" secondItem="VCz-tx-2mY" secondAttribute="trailing" constant="40" id="0uz-fO-j8j"/>
                             <constraint firstItem="cRk-Vm-wlv" firstAttribute="trailing" secondItem="fmV-lT-KYr" secondAttribute="trailing" constant="40" id="3dm-Oe-zmw"/>
+                            <constraint firstItem="asw-q0-bEk" firstAttribute="top" secondItem="Rln-f9-KS7" secondAttribute="bottom" constant="54.5" id="64u-fu-78B"/>
                             <constraint firstItem="SVR-HJ-6pf" firstAttribute="top" secondItem="VCz-tx-2mY" secondAttribute="bottom" constant="37" id="7AA-oy-LZq"/>
                             <constraint firstItem="VCz-tx-2mY" firstAttribute="leading" secondItem="cRk-Vm-wlv" secondAttribute="leading" constant="50" id="Ald-B7-qZG"/>
                             <constraint firstItem="1Ic-SG-Ujh" firstAttribute="top" secondItem="cRk-Vm-wlv" secondAttribute="top" constant="478" id="CzS-My-vVj"/>
@@ -246,6 +253,7 @@
                             <constraint firstItem="cRk-Vm-wlv" firstAttribute="trailing" secondItem="1Xs-yO-hKq" secondAttribute="trailing" constant="100" id="cnW-sz-iiB"/>
                             <constraint firstItem="fmV-lT-KYr" firstAttribute="top" secondItem="SVR-HJ-6pf" secondAttribute="bottom" constant="8" symbolic="YES" id="cnl-bW-Htz"/>
                             <constraint firstItem="asw-q0-bEk" firstAttribute="centerY" secondItem="ndo-1z-IgS" secondAttribute="centerY" id="dF5-Gc-RYI"/>
+                            <constraint firstItem="Rln-f9-KS7" firstAttribute="centerX" secondItem="cRk-Vm-wlv" secondAttribute="centerX" id="etz-Bl-RU1"/>
                             <constraint firstItem="SVR-HJ-6pf" firstAttribute="top" secondItem="SXv-Qm-qbf" secondAttribute="bottom" constant="79" id="fOD-D3-jtc"/>
                             <constraint firstItem="enK-NY-NhI" firstAttribute="leading" secondItem="cRk-Vm-wlv" secondAttribute="leading" constant="50" id="ha0-7U-aWU"/>
                             <constraint firstItem="cRk-Vm-wlv" firstAttribute="trailing" secondItem="asw-q0-bEk" secondAttribute="trailing" constant="100" id="i0D-yV-WeV"/>
@@ -265,12 +273,15 @@
                     <connections>
                         <outlet property="emailField" destination="VCz-tx-2mY" id="QOF-OA-6iM"/>
                         <outlet property="emailLabel" destination="kQS-qo-jia" id="0oq-rS-B0P"/>
+                        <outlet property="enterTextLabel" destination="Rln-f9-KS7" id="iWV-Fo-9LP"/>
                         <outlet property="fNameLabel" destination="asw-q0-bEk" id="Sjg-lV-J5r"/>
                         <outlet property="fnameField" destination="ndo-1z-IgS" id="rPT-Dt-JTP"/>
                         <outlet property="lNameLabel" destination="1Xs-yO-hKq" id="AWp-Re-xZc"/>
                         <outlet property="lnameField" destination="ehU-9u-KRW" id="YRq-Sv-NL7"/>
                         <outlet property="phoneNumField" destination="fmV-lT-KYr" id="BlU-aW-Ock"/>
                         <outlet property="phoneNumLabel" destination="RTx-eP-Z3B" id="EYV-pB-bCS"/>
+                        <outlet property="resetBtn" destination="kcb-Vb-TTX" id="23Q-IU-Qr2"/>
+                        <outlet property="submitBtn" destination="1Ic-SG-Ujh" id="cjt-YA-VVY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdq-jD-rgt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -769,7 +780,7 @@
         <!--Profile-->
         <scene sceneID="h9p-m8-94M">
             <objects>
-                <viewController id="6Lb-Hg-ER9" customClass="NewProfileViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Lb-Hg-ER9" customClass="NewProfileModalViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ER-XZ-JNm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -960,6 +971,8 @@
                         <outlet property="lnameField" destination="agD-Xz-k77" id="lzZ-X0-brE"/>
                         <outlet property="phoneNumField" destination="6St-eL-6Nz" id="t8c-hv-4xO"/>
                         <outlet property="phoneNumLabel" destination="BcN-g4-CTx" id="bJT-La-ZjO"/>
+                        <outlet property="resetBtn" destination="HOp-az-yob" id="iZE-bc-0Uq"/>
+                        <outlet property="submitBtn" destination="QAp-SG-oGu" id="HeM-1i-jDf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0AQ-7u-Jj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

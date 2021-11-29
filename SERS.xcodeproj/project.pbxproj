@@ -14,6 +14,7 @@
 		B60033B3272F3C7B0036DF63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B60033B2272F3C7B0036DF63 /* GoogleService-Info.plist */; };
 		B619E2872744C27D00A79F10 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B619E2862744C27D00A79F10 /* NewProfileViewController.swift */; };
 		B619E2892744C35100A79F10 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B619E2882744C35100A79F10 /* TipViewController.swift */; };
+		B6269BAB275168F100FACBBB /* NewProfileModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6269BAA275168F100FACBBB /* NewProfileModalViewController.swift */; };
 		B63C0EE72715168100922264 /* SlideToConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C0EE62715168100922264 /* SlideToConfirmViewController.swift */; };
 		B63C0EE927151BC100922264 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C0EE827151BC100922264 /* ConfirmViewController.swift */; };
 		B6441A6A2729F0340015ECAF /* MUPDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6441A692729F0340015ECAF /* MUPDViewController.swift */; };
@@ -68,6 +69,7 @@
 		B60033B2272F3C7B0036DF63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B619E2862744C27D00A79F10 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		B619E2882744C35100A79F10 /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
+		B6269BAA275168F100FACBBB /* NewProfileModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileModalViewController.swift; sourceTree = "<group>"; };
 		B63C0EE62715168100922264 /* SlideToConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideToConfirmViewController.swift; sourceTree = "<group>"; };
 		B63C0EE827151BC100922264 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		B6441A692729F0340015ECAF /* MUPDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUPDViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				B63C0EE827151BC100922264 /* ConfirmViewController.swift */,
 				B619E2882744C35100A79F10 /* TipViewController.swift */,
 				B619E2862744C27D00A79F10 /* NewProfileViewController.swift */,
+				B6269BAA275168F100FACBBB /* NewProfileModalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				B60033B1272F38F60036DF63 /* MapTestViewController.swift in Sources */,
 				64B8E2D02739D53700AEAFA6 /* MapLegendViewController.swift in Sources */,
 				B6A4A146270528990011DD8F /* SceneDelegate.swift in Sources */,
+				B6269BAB275168F100FACBBB /* NewProfileModalViewController.swift in Sources */,
 				B6B1CD67270AA92D00D6CF8E /* StorageManager.swift in Sources */,
 				B6A67EEF272A42A100EBD37E /* HelpViewController.swift in Sources */,
 			);

@@ -1,9 +1,10 @@
 //
-//  Message.swift
-//  Showupia
+//  Messages.swift
+//  SERS
 //
-//  Created by Chaudhry Talha on 5/25/21.
+//  Created by Noah Nemec on 11/16/21.
 //
+
 
 import UIKit
 import Firebase

@@ -1,3 +1,12 @@
+//
+//  ChatViewControler.swift
+//  SERS
+//
+//  Created by Noah Nemec on 11/16/21.
+//
+
+
+
 import UIKit
 import InputBarAccessoryView
 import Firebase
@@ -7,23 +16,24 @@ import SDWebImage
 
 class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
 
-    struct usertest {
-        let uid: String
-        let name: String
-        let photo: String
-    }
-    
 
-    var currentUser: User = Auth.auth().currentUser!
+
+//    var currentUser: User = Auth.auth().currentUser!
+    
+//    var userFirst: String = UDM.shared.defaults.value(forKey: "firstName") as! String
+//    var userLast: String = UDM.shared.defaults.value(forKey: "lastName") as! String
     
     
-    var useruuid = UUID()
     
 
     
-    var user2Name: String?
-    var user2ImgUrl: String?
-    var user2UID: String?
+    var userName: String = UDM.shared.defaults.value(forKey: "fullName") as! String
+    var userImgUrl: String = "noahnemec.jpg"
+    var userUID: String = UDM.shared.defaults.value(forKey: "id") as! String
+    
+    var user2Name: String = "Operator"
+    var user2ImgUrl: String = "Operator"
+    var user2UID: String = "Operator123456789"
     
     private var docReference: DocumentReference?
     
@@ -56,10 +66,11 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     // MARK: - Custom messages handlers
     
     func createNewChat() {
-        ChatViewController.usertest.init(uid: "1234", name: "noah", photo: "noah.jpg")
-        let users = [self.currentUser.uid, self.user2UID]
+        let users = [self.userUID, self.user2UID]
+        let location = "location string"
          let data: [String: Any] = [
-             "users":users
+             "users":users,
+             "location": location
          ]
          
          let db = Firestore.firestore().collection("Chats")
@@ -77,7 +88,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         
         //Fetch all the chats which has current user in it
         let db = Firestore.firestore().collection("Chats")
-                .whereField("users", arrayContains: Auth.auth().currentUser?.uid ?? "Not Found User 1")
+            .whereField("users", arrayContains: self.userUID ?? "Not Found User 1")
         
         
         db.getDocuments { (chatQuerySnap, error) in
@@ -102,7 +113,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
                         
                         let chat = Chat(dictionary: doc.data())
                         //Get the chat which has user2 id
-                        if (chat?.users.contains(self.user2UID!))! {
+                        if (chat?.users.contains(self.user2UID))! {
                             
                             self.docReference = doc.reference
                             //fetch it's thread collection
@@ -172,7 +183,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     
             func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
 
-                let message = Message(id: UUID().uuidString, content: text, created: Timestamp(), senderID: currentUser.uid, senderName: currentUser.displayName!)
+                let message = Message(id: UUID().uuidString, content: text, created: Timestamp(), senderID: self.userUID, senderName: self.userName)
                 
                   //messages.append(message)
                   insertNewMessage(message)
@@ -187,7 +198,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     // MARK: - MessagesDataSource
     func currentSender() -> SenderType {
         
-        return Sender(id: Auth.auth().currentUser!.uid, displayName: Auth.auth().currentUser?.displayName ?? "Name not found")
+        return Sender(id: self.userUID, displayName: self.userName ?? "Name not found")
         
     }
     
@@ -219,18 +230,18 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         return isFromCurrentSender(message: message) ? .blue: .lightGray
     }
 
-    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
-        
-        if message.sender.senderId == currentUser.uid {
-            SDWebImageManager.shared.loadImage(with: currentUser.photoURL, options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
-                avatarView.image = image
-            }
-        } else {
-            SDWebImageManager.shared.loadImage(with: URL(string: user2ImgUrl!), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
-                avatarView.image = image
-            }
-        }
-    }
+//    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+//
+//        if message.sender.senderId == currentUser.uid {
+//            SDWebImageManager.shared.loadImage(with: currentUser.photoURL, options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
+//                avatarView.image = image
+//            }
+//        } else {
+//            SDWebImageManager.shared.loadImage(with: URL(string: user2ImgUrl!), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
+//                avatarView.image = image
+//            }
+//        }
+//    }
 
     func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
 
