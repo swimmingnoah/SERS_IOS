@@ -19,23 +19,12 @@ class SuperViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: image)
         */
         //self.navigationController?.navigationBar.barTintColor = UIColor.black
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController?.tabBarController?.tabBar.tintColor = UIColor.white
-        self.navigationController?.tabBarController?.tabBar.barTintColor = UIColor.white
-        //self.navigationController?.tabBarItem.badgeColor = UIColor.white
+        self.navigationController?.tabBarController?.tabBar.barTintColor = UIColor.black
+        self.navigationController?.tabBarItem.badgeColor = UIColor.white
         
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
