@@ -8,13 +8,18 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import CoreLocation
 
-class TipViewController: SuperViewController, UITextFieldDelegate {
+class TipViewController: SuperViewController, UITextFieldDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var incidentTimeAndDate: UIDatePicker!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var incidentDesc: UITextField!
+    let locationManager = CLLocationManager()
+    
+    var long: String = ""
+    var lat: String = ""
     
     
     
@@ -30,6 +35,22 @@ class TipViewController: SuperViewController, UITextFieldDelegate {
         findFields()
 
 
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+//        coordinate = "\(locValue.latitude), \(locValue.longitude)"
+//        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        long = "\(locValue.latitude)"
+        lat = "\(locValue.longitude)"
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -81,20 +102,19 @@ class TipViewController: SuperViewController, UITextFieldDelegate {
 //        timeFormat.timeStyle = DateFormatter.Style.long
 //        timeFormat.dateStyle = DateFormatter.Style.long
         let timeInterval = NSDate().timeIntervalSince1970
-        let coordinate = "38.947726, -92.326521"
         
         let tipData = [
             "fname": firstName.text!,
             "lname": lastName.text!,
             "timeAndDate": timeInterval,
             "description": incidentDesc.text!,
-            "coordinates": coordinate
+            "long": long,
+            "lat": lat
         ] as [String : Any]
         
         
         UserDefaults.standard.set(self.firstName.text, forKey: "fName")
         let name = UserDefaults.standard.string(forKey: "fName") as String?
-        print("User Default Name:\(name)")
         //        SET FIELDS TO EMPTY AFTER SUBMISSION
         
         

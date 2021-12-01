@@ -33,7 +33,7 @@ class NewProfileViewController: SuperViewController, UITextFieldDelegate {
         hideLabels()
         loadFields()
         
-        self.resetBtn.isHidden = true
+        self.resetBtn.isHidden = false
         self.enterTextLabel.isHidden = true
         
     }
