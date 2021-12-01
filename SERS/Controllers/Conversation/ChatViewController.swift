@@ -13,8 +13,9 @@ import Firebase
 import MessageKit
 import FirebaseFirestore
 import SDWebImage
+import CoreLocation
 
-class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
+class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate, CLLocationManagerDelegate {
 
 
 
@@ -23,12 +24,14 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 //    var userFirst: String = UDM.shared.defaults.value(forKey: "firstName") as! String
 //    var userLast: String = UDM.shared.defaults.value(forKey: "lastName") as! String
     
-    
+    let locationManager = CLLocationManager()
+    var long: String = ""
+    var lat: String = ""
     
 
     
     var userName: String = UDM.shared.defaults.value(forKey: "fullName") as! String
-    var userImgUrl: String = "noahnemec.jpg"
+    var userImgUrl: String = ""
     var userUID: String = UDM.shared.defaults.value(forKey: "id") as! String
     
     var user2Name: String = "Operator"
@@ -58,8 +61,22 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         
         loadChat()
         
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
     }
-    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+//        coordinate = "\(locValue.latitude), \(locValue.longitude)"
+        long = "\(locValue.latitude)"
+        lat = "\(locValue.longitude)"
+//        print("locations = \(locValue.latitude) \(locValue.longitude)")
+    }
     
     
     
@@ -67,7 +84,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     
     func createNewChat() {
         let users = [self.userUID, self.user2UID]
-        let location = "location string"
+        let location = [ "long": long, "lat": lat]
          let data: [String: Any] = [
              "users":users,
              "location": location
