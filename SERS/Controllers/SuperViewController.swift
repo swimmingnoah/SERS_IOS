@@ -22,7 +22,7 @@ class SuperViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationController?.tabBarController?.tabBar.tintColor = UIColor.white
         self.navigationController?.tabBarController?.tabBar.barTintColor = UIColor.black
-        self.navigationController?.tabBarItem.badgeColor = UIColor.white
+        self.navigationController?.tabBarController?.tabBar.unselectedItemTintColor = UIColor.black
         
         
         
