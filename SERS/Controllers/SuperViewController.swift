@@ -8,11 +8,13 @@
 import UIKit
 
 class SuperViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        /*UIGraphicsBeginImageContext(self.view.frame.size)
+        let logo = UIImage(named: "Shield.png")
+        let imageView = UIImageView(image: logo)
+        self.navigationController?.navigationItem.titleView = imageView        /*UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "Backdrop")?.draw(in: self.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
@@ -23,6 +25,7 @@ class SuperViewController: UIViewController {
         self.navigationController?.tabBarController?.tabBar.tintColor = UIColor.white
         self.navigationController?.tabBarController?.tabBar.barTintColor = UIColor.black
         self.navigationController?.tabBarController?.tabBar.unselectedItemTintColor = UIColor.black
+        
         
         
         
