@@ -294,9 +294,9 @@
             <objects>
                 <navigationController id="qnV-Ky-Cww" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Help" id="iON-uo-AR6">
-                        <imageReference key="image" image="questionmark.folder" catalog="system" symbolScale="default" renderingMode="original"/>
+                        <imageReference key="image" image="questionmark" catalog="system" symbolScale="default"/>
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <imageReference key="selectedImage" image="questionmark.folder" catalog="system" symbolScale="default"/>
+                        <imageReference key="selectedImage" image="questionmark" catalog="system" symbolScale="default"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="PQu-JX-TnU">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -365,14 +365,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBW-59-Dii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3574" y="966"/>
+            <point key="canvasLocation" x="3573.913043478261" y="965.625"/>
         </scene>
         <!--Profile-->
         <scene sceneID="IdX-EX-8BW">
             <objects>
                 <navigationController id="Jy6-hw-Ct5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" id="UMI-63-BmP">
-                        <imageReference key="image" image="square.and.arrow.up" catalog="system" renderingMode="original"/>
+                        <imageReference key="image" image="square.and.arrow.up" catalog="system"/>
                         <imageReference key="selectedImage" image="square.and.arrow.up" catalog="system" symbolScale="default"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xix-jd-FJP">
@@ -391,8 +391,8 @@
         <scene sceneID="tys-DP-1bw">
             <objects>
                 <navigationController storyboardIdentifier="MapView" id="t2i-PB-5LG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" selectedImage="map" catalog="system" id="EcT-Vg-yZw">
-                        <imageReference key="image" image="map" catalog="system" renderingMode="original"/>
+                    <tabBarItem key="tabBarItem" title="Map" selectedImage="location.fill" catalog="system" id="EcT-Vg-yZw">
+                        <imageReference key="image" image="location.fill" catalog="system"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Zcp-yJ-aXU">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -432,8 +432,8 @@
         <scene sceneID="d60-f3-Qx8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lR1-3G-7cb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chats" selectedImage="pencil" catalog="system" id="H8k-f3-0bZ">
-                        <imageReference key="image" image="pencil" catalog="system" renderingMode="original"/>
+                    <tabBarItem key="tabBarItem" title="Chats" selectedImage="message.fill" catalog="system" id="H8k-f3-0bZ">
+                        <imageReference key="image" image="message.fill" catalog="system"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="MWC-sJ-hDm">
@@ -484,6 +484,10 @@
                                 <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SERS" translatesAutoresizingMaskIntoConstraints="NO" id="tv0-Sg-KWF">
+                                <rect key="frame" x="87" y="178" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5XT-q0-Jac"/>
                         <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -500,7 +504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4G-g7-pSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="903"/>
+            <point key="canvasLocation" x="437.68115942028987" y="902.67857142857133"/>
         </scene>
         <!--Tip View Controller-->
         <scene sceneID="5f7-6C-36J">
@@ -637,8 +641,8 @@
         <scene sceneID="pw6-bm-8NH">
             <objects>
                 <navigationController id="apR-QT-tDc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tip Line" selectedImage="xmark.bin" catalog="system" id="68A-Dt-fZB">
-                        <imageReference key="image" image="xmark.bin" catalog="system" renderingMode="original"/>
+                    <tabBarItem key="tabBarItem" title="Tip Line" selectedImage="folder.fill" catalog="system" id="68A-Dt-fZB">
+                        <imageReference key="image" image="folder.fill" catalog="system"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="iAF-zu-Q6O">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -652,10 +656,10 @@
             </objects>
             <point key="canvasLocation" x="438" y="139"/>
         </scene>
-        <!--Map Test View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="Xmu-va-Smc">
             <objects>
-                <viewController storyboardIdentifier="MapViewController" id="u9m-zx-LKB" customClass="MapTestViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="u9m-zx-LKB" customClass="MapViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="03S-Gc-VOb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -992,17 +996,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SERS" width="180" height="180"/>
         <image name="Siren" width="508.02700805664062" height="508.02700805664062"/>
         <image name="Tower" width="490" height="490"/>
         <image name="archivebox.circle" catalog="system" width="128" height="121"/>
         <image name="doc.fill" catalog="system" width="115" height="128"/>
-        <image name="map" catalog="system" width="128" height="110"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="questionmark.folder" catalog="system" width="128" height="97"/>
+        <image name="folder.fill" catalog="system" width="128" height="97"/>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="questionmark" catalog="system" width="96" height="128"/>
         <image name="shareplay" catalog="system" width="128" height="73"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
-        <image name="xmark.bin" catalog="system" width="128" height="93"/>
         <namedColor name="Buttons In">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
