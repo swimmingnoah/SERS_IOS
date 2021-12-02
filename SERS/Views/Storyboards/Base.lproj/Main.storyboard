@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3iE-dx-Lcg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3iE-dx-Lcg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,7 +25,8 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Click to start a Conversation">
-                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
+                                    <color key="baseForegroundColor" name="Buttons In"/>
+                                    <color key="baseBackgroundColor" name="Buttons Out"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="mupdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nEe-DS-ipa"/>
@@ -409,10 +410,11 @@
         <scene sceneID="h9t-B9-5I8">
             <objects>
                 <tabBarController id="3iE-dx-Lcg" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cPn-eD-Cl2">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="cPn-eD-Cl2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="collectionViewBackground"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="t2i-PB-5LG" kind="relationship" relationship="viewControllers" id="VgF-ae-cVg"/>
@@ -457,12 +459,15 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qu2-6e-hq3">
                                 <rect key="frame" x="82" y="720" width="250" height="31"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="mWw-G2-Sj0"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="square.and.pencil" catalog="system" title="New Tip" imagePadding="7">
-                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
+                                <buttonConfiguration key="configuration" style="filled" title="New Tip" imagePadding="7" titleAlignment="automatic">
+                                    <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="default"/>
+                                    <color key="baseForegroundColor" name="Buttons In"/>
+                                    <color key="baseBackgroundColor" name="Buttons Out"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="o52-KI-67F" kind="show" id="WQ0-6Z-Hqp"/>
@@ -998,6 +1003,15 @@
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="xmark.bin" catalog="system" width="128" height="93"/>
+        <namedColor name="Buttons In">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Buttons Out">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="collectionViewBackground">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
         <namedColor name="label">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>

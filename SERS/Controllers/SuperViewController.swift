@@ -24,6 +24,8 @@ class SuperViewController: UIViewController {
         self.navigationController?.tabBarController?.tabBar.barTintColor = UIColor.black
         self.navigationController?.tabBarItem.badgeColor = UIColor.white
         
+        
+        
         // Do any additional setup after loading the view.
     }
 
