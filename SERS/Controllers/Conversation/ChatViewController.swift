@@ -38,6 +38,9 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     var user2ImgUrl: String = "Operator"
     var user2UID: String = "Operator123456789"
     
+    var usrEmail: String = UDM.shared.defaults.value(forKey: "emailAddr") as! String
+    var phoneNum: String = UDM.shared.defaults.value(forKey: "phoneNumber") as! String
+    
     private var docReference: DocumentReference?
     
     var messages: [Message] = []
@@ -87,7 +90,9 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         let location = [ "long": long, "lat": lat]
          let data: [String: Any] = [
              "users":users,
-             "location": location
+             "location": location,
+             "email": self.usrEmail,
+             "phone number": self.phoneNum
          ]
          
          let db = Firestore.firestore().collection("Chats")

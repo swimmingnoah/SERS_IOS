@@ -21,6 +21,9 @@ class TipViewController: SuperViewController, UITextFieldDelegate, CLLocationMan
     var long: String = ""
     var lat: String = ""
     
+    var usrEmail: String = UDM.shared.defaults.value(forKey: "emailAddr") as! String
+    var phoneNum: String = UDM.shared.defaults.value(forKey: "phoneNumber") as! String
+    
     
     
     override func viewDidLoad() {
@@ -109,7 +112,9 @@ class TipViewController: SuperViewController, UITextFieldDelegate, CLLocationMan
             "timeAndDate": timeInterval,
             "description": incidentDesc.text!,
             "long": long,
-            "lat": lat
+            "lat": lat,
+            "email": self.usrEmail,
+            "phoneNum": self.phoneNum
         ] as [String : Any]
         
         
