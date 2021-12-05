@@ -709,10 +709,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdi-C1-g1d">
-                                <rect key="frame" x="30" y="170" width="354" height="393"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdi-C1-g1d">
+                                <rect key="frame" x="15" y="140" width="384" height="673"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="673" id="f58-Tl-md6"/>
+                                </constraints>
                                 <string key="text">The profile page is meant to store your name, phone number, and email. This information will be automatically filled in while reporting a tip or contacting emergency responders. This is to help emergency responders react quickly to emergency situations.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -720,10 +723,10 @@
                         <viewLayoutGuide key="safeArea" id="Fji-X1-VB3"/>
                         <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xdi-C1-g1d" firstAttribute="leading" secondItem="Fji-X1-VB3" secondAttribute="leading" constant="30" id="2SB-9Z-utL"/>
-                            <constraint firstItem="Fji-X1-VB3" firstAttribute="trailing" secondItem="xdi-C1-g1d" secondAttribute="trailing" constant="30" id="3J5-vU-WX3"/>
-                            <constraint firstItem="xdi-C1-g1d" firstAttribute="top" secondItem="Fji-X1-VB3" secondAttribute="top" constant="30" id="YHZ-SY-xld"/>
-                            <constraint firstItem="Fji-X1-VB3" firstAttribute="bottom" secondItem="xdi-C1-g1d" secondAttribute="bottom" constant="250" id="ihk-U8-xvZ"/>
+                            <constraint firstItem="xdi-C1-g1d" firstAttribute="leading" secondItem="Fji-X1-VB3" secondAttribute="leading" constant="15" id="2SB-9Z-utL"/>
+                            <constraint firstItem="Fji-X1-VB3" firstAttribute="trailing" secondItem="xdi-C1-g1d" secondAttribute="trailing" constant="15" id="3J5-vU-WX3"/>
+                            <constraint firstItem="xdi-C1-g1d" firstAttribute="top" secondItem="Fji-X1-VB3" secondAttribute="top" id="YHZ-SY-xld"/>
+                            <constraint firstItem="Fji-X1-VB3" firstAttribute="bottom" secondItem="xdi-C1-g1d" secondAttribute="bottom" id="ihk-U8-xvZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dPH-vx-3re"/>
