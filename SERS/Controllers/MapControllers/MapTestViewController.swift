@@ -189,7 +189,7 @@ class MapTestViewController: SuperViewController, MKMapViewDelegate, CLLocationM
             //            print("found user ")
             //            pinView.markerTintColor = UIColor.green
             let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "userLocation")
-            annotationView.image = UIImage(systemName:"location")
+            annotationView.image = UIImage(named: "Location_img")
             return annotationView
         }
         

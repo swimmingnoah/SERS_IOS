@@ -94,7 +94,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
+                                    <color key="baseForegroundColor" name="Buttons In"/>
+                                    <color key="baseBackgroundColor" name="Buttons Out"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="UA1-gD-Pi3" eventType="touchUpInside" id="VaR-6G-Ujf"/>

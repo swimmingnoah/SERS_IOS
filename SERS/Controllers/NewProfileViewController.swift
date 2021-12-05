@@ -21,7 +21,7 @@ class NewProfileViewController: SuperViewController, UITextFieldDelegate {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneNumField: UITextField!
     
-    var fullName: String = ""
+    var fullName: Optional = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -142,12 +142,10 @@ class NewProfileViewController: SuperViewController, UITextFieldDelegate {
     @IBAction func submitButtonTapped(_ sender: UIButton) {
 //        print("Submit button pressed!")
         let identifier = UUID()
-//        print("this is the id: \(identifier)")\
 
-//        var ref: DatabaseReference!
-//        ref = Database.database().reference()
-//        let userID = Auth.auth().currentUser?.uid
-        let fullName = "\(String(describing: fnameField.text)) \(String(describing: lnameField.text))"
+//        print("\(fnameField.text ?? "") \(lnameField.text ?? "")")
+        fullName = "\(fnameField.text ?? "") \(lnameField.text ?? "")"
+        
         
 //        var userFirst: String = UDM.shared.defaults.value(forKey: "firstName") as! String
 //        var userLast: String = UDM.shared.defaults.value(forKey: "lastName") as! String
@@ -156,13 +154,14 @@ class NewProfileViewController: SuperViewController, UITextFieldDelegate {
 //            self.fullName = "\(first) \(last)"
 //
 //        }
+
         
-        if let text = fnameField.text, text.isEmpty {
+        if let Fname = self.fnameField.text, Fname.isEmpty, let Lname = self.lnameField.text, Lname.isEmpty {
             self.enterTextLabel.isHidden = false
             self.enterTextLabel.text = "Plese Enter a Value"
         } else {
            print("Text Field is not empty")
-            loadFields()
+            
             self.resetBtn.isHidden = false
             self.submitBtn.isHidden = true
             
@@ -172,7 +171,12 @@ class NewProfileViewController: SuperViewController, UITextFieldDelegate {
             UDM.shared.defaults.set(phoneNumField.text, forKey: "phoneNumber")
             UDM.shared.defaults.set(identifier.uuidString, forKey: "id")
             UDM.shared.defaults.set(fullName, forKey: "fullName")
+            
+            loadFields()
         }
+//        loadFields()
+//        showLabels()
+//        hideFields()
 
         
         
