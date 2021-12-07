@@ -720,6 +720,7 @@
                                     <segue destination="lLJ-CO-75R" kind="show" id="OjK-Rq-Ndo"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" name="Buttons In"/>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -740,18 +741,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdi-C1-g1d">
-                                <rect key="frame" x="15" y="140" width="384" height="673"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="673" id="f58-Tl-md6"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="68" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdi-C1-g1d">
+                                <rect key="frame" x="15" y="100" width="384" height="713"/>
                                 <string key="text">The profile page is meant to store your name, phone number, and email. This information will be automatically filled in while reporting a tip or contacting emergency responders. This is to help emergency responders react quickly to emergency situations.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SERS" translatesAutoresizingMaskIntoConstraints="NO" id="Daa-D0-Gi6">
-                                <rect key="frame" x="304" y="140" width="70" height="70"/>
+                                <rect key="frame" x="304" y="70" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Bgn-wt-xmA"/>
                                     <constraint firstAttribute="height" constant="70" id="LeX-KB-NX3"/>
@@ -761,12 +759,12 @@
                         <viewLayoutGuide key="safeArea" id="Fji-X1-VB3"/>
                         <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xdi-C1-g1d" firstAttribute="leading" secondItem="Fji-X1-VB3" secondAttribute="leading" constant="30" id="2SB-9Z-utL"/>
-                            <constraint firstItem="Fji-X1-VB3" firstAttribute="trailing" secondItem="xdi-C1-g1d" secondAttribute="trailing" constant="30" id="3J5-vU-WX3"/>
-                            <constraint firstItem="Daa-D0-Gi6" firstAttribute="top" secondItem="HQn-iM-Bs2" secondAttribute="topMargin" id="XsI-Q4-dWb"/>
-                            <constraint firstItem="xdi-C1-g1d" firstAttribute="top" secondItem="Fji-X1-VB3" secondAttribute="top" constant="30" id="YHZ-SY-xld"/>
+                            <constraint firstItem="xdi-C1-g1d" firstAttribute="leading" secondItem="Fji-X1-VB3" secondAttribute="leading" constant="15" id="2SB-9Z-utL"/>
+                            <constraint firstItem="Fji-X1-VB3" firstAttribute="trailing" secondItem="xdi-C1-g1d" secondAttribute="trailing" constant="15" id="3J5-vU-WX3"/>
+                            <constraint firstItem="Daa-D0-Gi6" firstAttribute="top" secondItem="HQn-iM-Bs2" secondAttribute="topMargin" constant="-70" id="XsI-Q4-dWb"/>
+                            <constraint firstItem="xdi-C1-g1d" firstAttribute="top" secondItem="HQn-iM-Bs2" secondAttribute="top" constant="100" id="YHZ-SY-xld"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Daa-D0-Gi6" secondAttribute="trailing" constant="20" id="ZYq-4z-U1H"/>
-                            <constraint firstItem="Fji-X1-VB3" firstAttribute="bottom" secondItem="xdi-C1-g1d" secondAttribute="bottom" constant="250" id="ihk-U8-xvZ"/>
+                            <constraint firstItem="Fji-X1-VB3" firstAttribute="bottom" secondItem="xdi-C1-g1d" secondAttribute="bottom" id="ihk-U8-xvZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dPH-vx-3re"/>
@@ -936,25 +934,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="5ne-ZP-57q">
                                 <rect key="frame" x="100" y="65.5" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="Buttons Out"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="qTd-kT-KsH">
                                 <rect key="frame" x="100" y="165.5" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="Buttons Out"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMj-3j-7RV">
                                 <rect key="frame" x="100" y="265.5" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="Buttons Out"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcN-g4-CTx">
                                 <rect key="frame" x="100" y="365.5" width="214" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="Buttons Out"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOp-az-yob">
