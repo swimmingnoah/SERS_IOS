@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MUPD-->
+        <!--SERS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MUPDViewController" customModule="SERS" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,7 +58,7 @@
                             <constraint firstItem="khR-ax-kXt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="tb0-wt-GDQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="MUPD" id="4rH-pF-gDq"/>
+                    <navigationItem key="navigationItem" title="SERS" id="4rH-pF-gDq"/>
                     <connections>
                         <segue destination="MnE-g7-lyu" kind="show" identifier="ChatSegue" id="zLd-kK-CnA"/>
                         <segue destination="6Lb-Hg-ER9" kind="showDetail" identifier="profileSegue" id="v1J-hs-GBp"/>
