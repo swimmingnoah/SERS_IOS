@@ -10,7 +10,6 @@ import UIKit
 class NewProfileModalViewController: SuperViewController, UITextFieldDelegate {
 
     @IBOutlet weak var submitBtn: UIButton!
-    @IBOutlet weak var resetBtn: UIButton!
     @IBOutlet weak var phoneNumLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var lNameLabel: UILabel!
@@ -32,7 +31,6 @@ class NewProfileModalViewController: SuperViewController, UITextFieldDelegate {
         hideLabels()
         loadFields()
         
-        self.resetBtn.isHidden = true
         
     }
     
@@ -130,7 +128,6 @@ class NewProfileModalViewController: SuperViewController, UITextFieldDelegate {
         hideLabels()
         showFields()
         self.submitBtn.isHidden = false
-        self.resetBtn.isHidden = true
     }
     
     
@@ -140,7 +137,6 @@ class NewProfileModalViewController: SuperViewController, UITextFieldDelegate {
     @IBAction func submitButtonTapped(_ sender: UIButton) {
 //        print("Submit button pressed!")
         let identifier = UUID()
-        self.resetBtn.isHidden = false
         self.submitBtn.isHidden = true
 
         let fullName = "\(String(describing: fnameField.text)) \(String(describing: lnameField.text))"
