@@ -408,7 +408,7 @@
             <objects>
                 <navigationController storyboardIdentifier="MapView" id="t2i-PB-5LG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" selectedImage="location.fill" catalog="system" id="EcT-Vg-yZw">
-                        <imageReference key="image" image="location.fill" catalog="system"/>
+                        <imageReference key="image" image="location" catalog="system"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Zcp-yJ-aXU">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -449,7 +449,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lR1-3G-7cb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Chats" selectedImage="message.fill" catalog="system" id="H8k-f3-0bZ">
-                        <imageReference key="image" image="message.fill" catalog="system"/>
+                        <imageReference key="image" image="message" catalog="system"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="MWC-sJ-hDm">
@@ -669,7 +669,7 @@
             <objects>
                 <navigationController id="apR-QT-tDc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tip Line" selectedImage="folder.fill" catalog="system" id="68A-Dt-fZB">
-                        <imageReference key="image" image="folder.fill" catalog="system"/>
+                        <imageReference key="image" image="folder" catalog="system"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="iAF-zu-Q6O">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -711,10 +711,10 @@
                     <navigationItem key="navigationItem" id="xvd-6k-s5v">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Gcx-pr-z1X">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HSU-nC-DEg">
-                                <rect key="frame" x="20" y="5" width="46" height="34"/>
+                                <rect key="frame" x="20" y="5" width="50" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="doc.fill" catalog="system" title=""/>
+                                <buttonConfiguration key="configuration" style="plain" image="map.fill" catalog="system"/>
                                 <connections>
                                     <action selector="toMapView:" destination="u9m-zx-LKB" eventType="touchUpInside" id="vOF-I9-M2S"/>
                                     <segue destination="lLJ-CO-75R" kind="show" id="OjK-Rq-Ndo"/>
@@ -785,35 +785,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tower" translatesAutoresizingMaskIntoConstraints="NO" id="ywq-Hc-mtn">
-                                <rect key="frame" x="0.0" y="153" width="139" height="120"/>
+                                <rect key="frame" x="0.0" y="250" width="139" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The icon to the left represents the emergency towers. These towers are scattered throughout campus. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIU-J9-zgR">
-                                <rect key="frame" x="147" y="113" width="247" height="199"/>
+                                <rect key="frame" x="147" y="210" width="247" height="199"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Siren" translatesAutoresizingMaskIntoConstraints="NO" id="bx5-o2-M0o">
-                                <rect key="frame" x="0.0" y="574" width="139" height="129"/>
+                                <rect key="frame" x="0.0" y="671" width="139" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="archivebox.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fua-eG-AyG">
-                                <rect key="frame" x="0.0" y="353.5" width="139" height="138"/>
+                                <rect key="frame" x="0.0" y="450.5" width="139" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="label"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The icon to the left represents the emergency yellow boxes. They are found around parking structures or dorms." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRF-uC-lHu">
-                                <rect key="frame" x="147" y="334" width="247" height="177"/>
+                                <rect key="frame" x="147" y="431" width="247" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The icon to the left represents the MUPD station found at the bottom of the Virginia Avenue parking strucutre." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zA1-tX-7A8">
-                                <rect key="frame" x="147" y="550" width="255" height="177"/>
+                                <rect key="frame" x="147" y="647" width="255" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -826,6 +826,13 @@
                                     <constraint firstAttribute="width" constant="70" id="m2y-oz-hTz"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map Legend" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7f-qi-6t6">
+                                <rect key="frame" x="113" y="124" width="189" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7rJ-gb-XtS"/>
                         <color key="backgroundColor" red="0.27450980392156865" green="0.50980392156862742" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1048,9 +1055,12 @@
         <image name="Siren" width="508.02700805664062" height="508.02700805664062"/>
         <image name="Tower" width="490" height="490"/>
         <image name="archivebox.circle" catalog="system" width="128" height="121"/>
-        <image name="doc.fill" catalog="system" width="115" height="128"/>
+        <image name="folder" catalog="system" width="128" height="97"/>
         <image name="folder.fill" catalog="system" width="128" height="97"/>
+        <image name="location" catalog="system" width="128" height="118"/>
         <image name="location.fill" catalog="system" width="128" height="121"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="message" catalog="system" width="128" height="113"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
         <image name="shareplay" catalog="system" width="128" height="73"/>
